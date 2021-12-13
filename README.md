@@ -1,12 +1,15 @@
-## Welcome to GitHub Pages
+## Homepage
 
-You can use the [editor on GitHub](https://github.com/huty1998/huty1998.github.io/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+
+# Hi!
+
+
+
+
+Use the [editor on GitHub](https://github.com/huty1998/huty1998.github.io/edit/main/README.md) to maintain and preview the content for the website in Markdown files.
 
 ### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
 ```markdown
 Syntax highlighted code block
