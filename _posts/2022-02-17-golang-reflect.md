@@ -8,7 +8,10 @@ tags:
   - Golang
 ---
 
+reflect.ValueOf(&var) is a pointer.
+reflect.ValueOf(&var).Elem() is what the pointer points to.
 
+```go
 isRTMPPullWithAudio := false
 playSpecRef := reflect.ValueOf(&remoteSpec.PlaySpec).Elem()
 for i := 0; i < playSpecRef.NumField(); i++ {
@@ -18,3 +21,4 @@ for i := 0; i < playSpecRef.NumField(); i++ {
 		break
 	}
 }
+```
