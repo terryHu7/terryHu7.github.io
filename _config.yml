@@ -101,5 +101,8 @@ page-mathjax: false
 
 # Friends
 friends: [
-
+  {
+      title: "Xiang Yucheng",
+      href: "http://www.ycxiangblog.com/"
+  }
 ]
