@@ -1,6 +1,6 @@
 ---
 layout: post
-title: `piu.sh` for git push simplification
+title: "A bash script for git push simplification"
 subtitle: ''
 author: "Terry"
 header-style: text
