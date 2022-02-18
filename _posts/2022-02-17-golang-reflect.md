@@ -8,7 +8,8 @@ tags:
   - Golang
 ---
 
-reflect.ValueOf(&var) is a pointer.
+reflect.ValueOf(&var) is a pointer.  
+
 reflect.ValueOf(&var).Elem() is what the pointer points to.
 
 ```go
