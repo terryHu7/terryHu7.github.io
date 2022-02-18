@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "First Time Use Stackoverflow and Get A Life-Saving Answer"
+title: "First time use stackoverflow and get a life-saving answer"
 subtitle: ''
 author: "Terry"
 header-style: text
