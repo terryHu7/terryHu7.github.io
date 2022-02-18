@@ -11,5 +11,5 @@ tags:
 ![](/img/playbin.png)
 
 
-[https://stackoverflow.com/questions/71152953/a-general-gstreamer-pipeline-use-xvimagesink-to-pull-rtmp-stream-with-without-au]
-(https://stackoverflow.com/questions/71152953/a-general-gstreamer-pipeline-use-xvimagesink-to-pull-rtmp-stream-with-without-au)
+Check:
+<https://stackoverflow.com/questions/71152953/a-general-gstreamer-pipeline-use-xvimagesink-to-pull-rtmp-stream-with-without-au>
