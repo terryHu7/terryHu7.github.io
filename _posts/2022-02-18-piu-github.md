@@ -40,4 +40,4 @@ sudo chmod 755 piu.sh
 ```
 
 
-Done. Just hit `piu.sh` any time you're in need! `:kissing_heart`:
+Done. Just hit `piu.sh` any time you're in need! 😘:
