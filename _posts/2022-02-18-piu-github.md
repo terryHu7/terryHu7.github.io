@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "piu.sh for git push simplification"
+title: `piu.sh` for git push simplification
 subtitle: ''
 author: "Terry"
 header-style: text
@@ -8,7 +8,7 @@ tags:
   - Shell
 ---
 
-After getting tired of entering three-way git commands (add, commit and then push), I write a bash script just for the convience, named "piu.sh". 
+After getting tired of entering three-way git commands (add, commit and then push), I write a bash script just for the convience, named `piu.sh`. 
 
 
 ```shell
@@ -40,4 +40,4 @@ sudo chmod 755 piu.sh
 ```
 
 
-Done. Just hit piu.sh any time you're in need! :kissing_heart:
+Done. Just hit `piu.sh` any time you're in need! `:kissing_heart`:
