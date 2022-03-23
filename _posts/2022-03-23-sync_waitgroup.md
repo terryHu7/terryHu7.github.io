@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Golang][1]GOPATH"
+title: "wg.Done is wg.Add(-1)"
 subtitle: ''
 author: "Terry"
 header-style: text
