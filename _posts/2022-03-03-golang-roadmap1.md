@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Golang][1]GOPATH"
+title: "[Golang] [1]GOPATH "
 subtitle: ''
 author: "Terry"
 header-style: text
