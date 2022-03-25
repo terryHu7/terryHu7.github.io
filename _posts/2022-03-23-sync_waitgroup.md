@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "wg.Done is wg.Add(-1)"
-subtitle: ''
+subtitle: 'Wait blocks until the WaitGroup counter is zero.'
 author: "Terry"
 header-style: text
 tags:
