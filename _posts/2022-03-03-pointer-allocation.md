@@ -9,9 +9,6 @@ tags:
 ---
 ---
 
-Check this:
-<https://www.cnblogs.com/xbblogs/p/11102970.html>  
+Check this: <https://www.cnblogs.com/xbblogs/p/11102970.html>  
 
-and this:
-
-<https://segmentfault.com/a/1190000040536308?sort=votes>
+and this: <https://segmentfault.com/a/1190000040536308?sort=votes>
