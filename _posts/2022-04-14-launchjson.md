@@ -24,6 +24,6 @@ tags:
 
 `${fileExtname}`:当前文件的后缀
 
-${lineNumber}:当前文件光标所在的行号
+`${lineNumber}`:当前文件光标所在的行号
 
-${env:PATH}:系统中的环境变量
+`${env:PATH}`:系统中的环境变量
