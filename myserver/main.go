@@ -14,11 +14,14 @@ func main() {
 	//middleware
 	r.Use(m1())
 
-	r.GET("/", func(c *gin.Context) {
-		req, _ := c.Get("key1") //same ctx as which in middleware??
+	r.GET("/", func(ctx *gin.Context) {
+		req, _ := ctx.Get("key1") //same ctx as which in middleware??
 		fmt.Println("main")
-		c.JSON(http.StatusOK, map[string]interface{}{"req": req})
+		ctx.JSON(http.StatusOK, map[string]interface{}{"req": req})
 	})
 
+	r.NoRoute(func(ctx *gin.Context) { //404
+		ctx.String(http.StatusNotFound, "404 NOT FOUND, NO ROUTE")
+	})
 	r.Run(":728")
 }
