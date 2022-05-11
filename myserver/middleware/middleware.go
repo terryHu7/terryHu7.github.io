@@ -1,4 +1,4 @@
-package main
+package middleware
 
 import (
 	"fmt"
@@ -7,7 +7,7 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-func m1() gin.HandlerFunc {
+func M1() gin.HandlerFunc {
 	return func(ctx *gin.Context) {
 		p := fmt.Println
 		tpin := time.Now()

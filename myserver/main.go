@@ -1,27 +1,22 @@
 package main
 
 import (
-	"fmt"
-	"net/http"
-
-	"github.com/gin-gonic/gin"
+	"context"
+	"myserver/cmd"
+	"os"
+	"os/signal"
+	"syscall"
 )
 
 func main() {
 
-	r := gin.Default()
+	ctx, cancel := context.WithCancel(context.Background())
 
-	//middleware
-	r.Use(m1())
+	go func() {
+		c := make(chan os.Signal)
+		signal.Notify(c, syscall.SIGINT)
+		cancel()
+	}()
 
-	r.GET("/", func(ctx *gin.Context) {
-		req, _ := ctx.Get("key1") //same ctx as which in middleware??
-		fmt.Println("main")
-		ctx.JSON(http.StatusOK, map[string]interface{}{"req": req})
-	})
-
-	r.NoRoute(func(ctx *gin.Context) { //404
-		ctx.String(http.StatusNotFound, "404 NOT FOUND, NO ROUTE")
-	})
-	r.Run(":728")
+	cmd.Start(ctx)
 }
