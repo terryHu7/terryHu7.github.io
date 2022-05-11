@@ -28,3 +28,5 @@ func f1(c chan int) {
 	c <- 2
 	p("c<- 2")
 }
+
+//https://pic2.zhimg.com/80/v2-2719651ab6fd420e6bd03b232fdb8239_720w.jpg
