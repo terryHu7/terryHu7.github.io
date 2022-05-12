@@ -34,6 +34,8 @@ func Start(ctx context.Context, wg sync.WaitGroup) {
 	// 		fmt.Println(nil, err.Error())
 	// 	}
 	// }()
-
-	http.ListenAndServe(":728", r) //combine this router with http.Server, listen and server http request.
+	// r.Run(":728")
+	// http.ListenAndServe(":728", r) //combine this router with http.Server, listen and server http request
+	server := &http.Server{Addr: ":728", Handler: r}
+	server.ListenAndServe() //*combine this router with http.Server, listen and server http request.
 }
