@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Find A Way To Your Heart"
+title: "Network Is To find A Way To Your Heart"
 subtitle: ''
 author: "Terry"
 header-style: text
