@@ -34,6 +34,6 @@ HTTP 的传输单位则是`消息或报文(message)`，TCP 层的传输单位是
 
 
 ## 一言以蔽之网络通信
-HTTP数据包+可靠传输的TCP头部/路由导航的IP头部/下一位置的MAC头部+路由器（交换机）
+`HTTP数据包` + `可靠传输的TCP头部` + `路由导航的IP头部` + `下一位置的MAC头部` + `路由器(交换机)`
 
 ![](https://cdn.xiaolincoding.com/gh/xiaolincoder/ImageHost/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E9%94%AE%E5%85%A5%E7%BD%91%E5%9D%80%E8%BF%87%E7%A8%8B/21.jpg)
