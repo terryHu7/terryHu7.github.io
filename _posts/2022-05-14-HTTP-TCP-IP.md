@@ -25,9 +25,9 @@ HTTP 的传输单位则是`消息或报文(message)`，TCP 层的传输单位是
 
 ![](https://cdn.xiaolincoding.com/gh/xiaolincoder/ImageHost/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/IP/3.jpg)
 
-| Dst IP   | Next IP |
-|:----------|:-------------:|
-| 10.2.22.1   |   10.2.22.0 | 
+|  Dst IP  |  Next IP  |
+|:----------|:----------:|
+| 10.2.22.1 | 10.2.22.0 | 
 
 ## 网络接口层 
 - 以太网（局域网）用MAC地址通信
