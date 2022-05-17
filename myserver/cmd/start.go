@@ -5,13 +5,13 @@ import (
 	"fmt"
 	"myserver/middleware"
 	"net/http"
-	"sync"
 
 	"github.com/gin-gonic/gin"
 )
 
-func Start(ctx context.Context, wg sync.WaitGroup) {
-	defer wg.Done()
+func Start(ctx context.Context) {
+
+	// defer wg.Done()
 	r := gin.Default()
 
 	//middleware
@@ -27,15 +27,31 @@ func Start(ctx context.Context, wg sync.WaitGroup) {
 		ctx.String(http.StatusNotFound, "404 NOT FOUND, NO ROUTE")
 	})
 
-	// go func() {
-	// 	server := &http.Server{Addr: "728", Handler: r}
-	// 	ln, _ := net.Listen("tcp", server.Addr)
-	// 	if err := server.Serve(ln); err != nil && err != http.ErrServerClosed {
-	// 		fmt.Println(nil, err.Error())
-	// 	}
-	// }()
-	// r.Run(":728")
-	// http.ListenAndServe(":728", r) //combine this router with http.Server, listen and server http request
-	server := &http.Server{Addr: ":728", Handler: r}
-	server.ListenAndServe() //*combine this router with http.Server, listen and server http request.
+	// r.Run(":728") //gin
+
+	server := &http.Server{Addr: ":728", Handler: r} //combine this router with http.Server
+	server.ListenAndServe()                          // listen and server http request
+	<-ctx.Done()                                     //release port
+	if err := server.Shutdown(ctx); err != nil {
+		fmt.Printf("Server forced to shutdown: " + err.Error())
+	}
+
+	/*
+			syncq, _ := net.Listen("tcp", "127.0.0.1:728")
+		LOOP:
+			for {
+				acceptq, _ := syncq.Accept()
+				select {
+				case <-ctx.Done():
+					acceptq.Close()
+					break LOOP
+				default:
+					go func(acceptq net.Conn, ctx context.Context) {
+						defer acceptq.Close()
+						fmt.Println(acceptq.LocalAddr(), acceptq.RemoteAddr())
+					}(acceptq, ctx)
+				}
+
+			}
+	*/
 }
