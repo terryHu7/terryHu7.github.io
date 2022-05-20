@@ -7,10 +7,17 @@ func main() {
 }
 
 func robotdp(row, column int) (ways int) {
-	//2d slice
-	dp := [][]int{}
-	for i := 0; i < row; i++ {
-		dp = append(dp, make([]int, column))
+
+	// 1
+	// dp := [][]int{}
+	// for i := 0; i < row; i++ {
+	// 	dp = append(dp, make([]int, column))
+	// }
+
+	//2
+	dp := make([][]int, row)
+	for r := range dp {
+		dp[r] = make([]int, column)
 	}
 
 	for i := 0; i < row; i++ {
