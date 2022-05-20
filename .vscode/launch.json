@@ -10,7 +10,7 @@
             "type": "go",
             "request": "launch",
             "mode": "auto",
-            "program": "${workspaceFolder}/codes/apr/apr16.go"
+            "program": "${workspaceFolder}/codes/may/may20dp.go"
         }
     ]
 }
