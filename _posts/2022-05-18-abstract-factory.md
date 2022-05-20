@@ -11,6 +11,7 @@ tags:
 
 > **`A struct` implement `an interface` if all `methods` of the interface have been implemented by the struct.**
 
+
 ```go
 package main
 
