@@ -1,6 +1,6 @@
 ---
 layout: post
-title: ""
+title: "export HISTTIMEFORMAT="%F %T ""
 subtitle: ''
 author: "Terry"
 header-style: text
