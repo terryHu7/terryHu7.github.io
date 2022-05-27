@@ -1,15 +1,11 @@
 ---
 layout: post
-title: "Here we go"
+title: "WORK IN THE DARK & SHINE IN THE LIGHT"
 subtitle: ''
 author: "Terry"
 header-style: text
 tags:
-  - Git
-  - Linux
-  - Golang
-  - Web Programming
----
+  - self-development
 ---
 
 [Markdown CheatSheet](https://quickref.me/markdown)
