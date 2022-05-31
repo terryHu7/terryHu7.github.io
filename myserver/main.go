@@ -14,6 +14,15 @@ import (
 
 func main() {
 
+	ctx, cancel := context.WithCancel(context.Background())
+	c := make(chan os.Signal)
+	go func(c chan os.Signal) {
+		signal.Notify(c, syscall.SIGHUP, syscall.SIGINT, syscall.SIGTERM, syscall.SIGQUIT, syscall.SIGKILL, os.Interrupt)
+		if <-c != nil {
+			cancel()
+		}
+	}(c)
+
 	r := gin.Default()
 
 	//middleware
@@ -30,21 +39,15 @@ func main() {
 	})
 
 	// r.Run(":728") //gin
-	ctx, cancel := context.WithCancel(context.Background())
 
 	server := &http.Server{Addr: ":728", Handler: r} //combine this router with http.Server
 	server.ListenAndServe()                          // listen and server http request
-	<-ctx.Done()                                     //release port
+
+	<-ctx.Done() //release port
 	if err := server.Shutdown(ctx); err != nil {
 		fmt.Printf("Server forced to shutdown: " + err.Error())
 	}
 
-	c := make(chan os.Signal)
-	signal.Notify(c, syscall.SIGHUP, syscall.SIGINT, syscall.SIGTERM, syscall.SIGQUIT, syscall.SIGKILL, os.Interrupt)
-	if <-c != nil {
-		cancel()
-	}
-	<-ctx.Done()
 	// var wg sync.WaitGroup
 	// wg.Add(1)
 	// wg.Wait() https://blog.csdn.net/textdemo123/article/details/103416781
