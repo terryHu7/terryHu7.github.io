@@ -13,6 +13,7 @@ import (
 )
 
 func main() {
+	// database.Dbinit()
 
 	r := gin.Default()
 
