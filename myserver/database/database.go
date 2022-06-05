@@ -3,7 +3,7 @@ package database
 import (
 	"fmt"
 
-	"gorm.io/driver/mysql"
+	"gorm.io/driver/sqlite"
 	"gorm.io/gorm"
 )
 
@@ -12,11 +12,11 @@ type Person struct {
 	Name string
 }
 
+var Db *gorm.DB
+
 func Dbinit() {
-	Db, _ := gorm.Open(mysql.New((mysql.Config{
-		SkipInitializeWithVersion: true,
-		Conn:                      nil,
-	})), &gorm.Config{})
+	Db, _ := gorm.Open(sqlite.Open("test.db"), &gorm.Config{})
+
 	Db.AutoMigrate(&Person{})
 
 	Db.Create(&Person{Id: 320323, Name: "Terry"})
