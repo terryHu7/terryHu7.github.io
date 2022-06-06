@@ -5,7 +5,7 @@ subtitle: ''
 author: "Terry"
 header-style: text
 tags:
-  - self-development
+  - Self-Development
 ---
 
 [Markdown CheatSheet](https://quickref.me/markdown)
