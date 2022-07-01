@@ -15,7 +15,7 @@ func main() {
 	go func() {
 		for {
 			select {
-			case <-ticker.C:
+			case <-ticker.C: //block
 				{
 					fmt.Println("tik tik...")
 				}
