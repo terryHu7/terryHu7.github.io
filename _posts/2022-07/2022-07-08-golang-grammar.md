@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "if v,exist:=map["key"]; exist{}"
+title: "if v,exist:=map[\"key\"]; exist{}"
 subtitle: ''
 author: "Terry"
 header-style: text
