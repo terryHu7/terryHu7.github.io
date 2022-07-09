@@ -20,7 +20,6 @@ var Gray   = "\033[37m"
 var White  = "\033[97m"
 
 fmt.Println("\033[1;31m**Red**\033[0m")
-```  
-As in regular expression, `\033`->`^`, `m`->`$`
-
-As in markdown, `1`->`**bold**`
+//As in regular expression, `\033`->`^`, `m`->`$`
+//As in markdown, `1`->`**bold**`
+``` 
