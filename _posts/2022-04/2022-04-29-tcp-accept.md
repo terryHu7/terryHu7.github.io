@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "listen(), 3-way shake and then accept()"
+title: "listen(), 3-way shake and accept()"
 subtitle: ''
 author: "Terry"
 header-style: text
