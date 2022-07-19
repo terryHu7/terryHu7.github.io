@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Golang Linked list"
+title: "Golang Linked List"
 subtitle: ''
 author: "Terry"
 header-style: text
