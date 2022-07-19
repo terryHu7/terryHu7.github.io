@@ -10,7 +10,7 @@
             "type": "go",
             "request": "launch",
             "mode": "auto",
-            "program": "${workspaceFolder}/_codes/jul/jul19linkedlist.go"
+            "program": "${workspaceFolder}/_codes/jul/19_queue.go"
         }
     ]
 }
