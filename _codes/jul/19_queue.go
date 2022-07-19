@@ -28,4 +28,12 @@ func main() {
 	drop2 := Dequeue()
 	drop3 := Dequeue()
 	fmt.Println(Queue, drop1, drop2, drop3)
+
+	test := []int{1}
+	fmt.Println(test[1:])
+
+	test2 := []int{}
+	var test3 []int
+	fmt.Println(test2 == nil)
+	fmt.Printf("test2: %p, test3: %p", test2, test3)
 }
