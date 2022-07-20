@@ -13,7 +13,7 @@ func Dequeue() int {
 		return -1
 	} else {
 		drop := Queue[0]
-		Queue = Queue[1:] //???
+		Queue = Queue[1:] //???  []int{1}[1:] & []int{1}[1]
 		return drop
 	}
 
