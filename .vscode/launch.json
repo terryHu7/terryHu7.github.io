@@ -10,7 +10,7 @@
             "type": "go",
             "request": "launch",
             "mode": "auto",
-            "program": "${workspaceFolder}/_codes/jul/19_queue.go"
+            "program": "${workspaceFolder}/_codes/jul/21_binarysearch.go"
         }
     ]
 }
