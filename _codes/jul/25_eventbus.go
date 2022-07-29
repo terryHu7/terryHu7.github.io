@@ -1,4 +1,4 @@
-// ��������https://lailin.xyz/post/observer.html
+// https://lailin.xyz/post/observer.html
 package main
 
 import (
@@ -14,7 +14,7 @@ type Bus interface {
 	Publish(topic string, args ...interface{})
 }
 
-// AsyncEventBus �첽�¼�����
+// AsyncEventBus
 type AsyncEventBus struct {
 	handlers map[string][]reflect.Value
 	lock     sync.Mutex
@@ -28,7 +28,7 @@ func NewAsyncEventBus() *AsyncEventBus {
 	}
 }
 
-// Subscribe ����
+// Subscribe
 func (bus *AsyncEventBus) Subscribe(topic string, f interface{}) error {
 	bus.lock.Lock()
 	defer bus.lock.Unlock()
@@ -48,8 +48,7 @@ func (bus *AsyncEventBus) Subscribe(topic string, f interface{}) error {
 	return nil
 }
 
-// Publish ����
-// �����첽ִ�У����Ҳ���ȴ����ؽ��
+// Publish
 func (bus *AsyncEventBus) Publish(topic string, args ...interface{}) {
 	handlers, ok := bus.handlers[topic]
 	if !ok {
