@@ -23,7 +23,7 @@ func TcpServer() {
 }
 
 func process(conn net.Conn) {
-	defer conn.Close()
+	defer conn.Close() //TIME_WAIT
 	for {
 		reader := bufio.NewReader(conn)
 		var buf [128]byte
