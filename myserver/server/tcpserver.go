@@ -26,7 +26,7 @@ func process(conn net.Conn) {
 	defer conn.Close() //TIME_WAIT
 	for {
 		reader := bufio.NewReader(conn)
-		var buf [128]byte
+		var buf [256]byte
 		n, err := reader.Read(buf[:])
 		if err != nil {
 			fmt.Println("read from client failed, err:", err)
@@ -37,3 +37,5 @@ func process(conn net.Conn) {
 		conn.Write([]byte(recvStr))
 	}
 }
+
+//https://www.liwenzhou.com/posts/Go/15_socket/
