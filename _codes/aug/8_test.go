@@ -1,5 +1,5 @@
 package aug
 
-func TestAug{
+func Test8{
 	
 }
