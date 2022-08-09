@@ -12,3 +12,5 @@ cp ./${emslog} ~/Desktop/${time}
 cd ../mediaAgent/
 restart=$(cat magent.log |grep -E -n  "Media Agent start... "|tail -n 1|awk '{print $1}'|cut -d ':' -f 1)
 tail -n +${restart} magent.log >> ~/Desktop/${time}/magent.log
+
+echo "~/Desktop/${time}"
