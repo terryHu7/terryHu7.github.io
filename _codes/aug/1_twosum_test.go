@@ -1,4 +1,9 @@
-package main
+package aug
+
+import (
+	"fmt"
+	"testing"
+)
 
 func twoSum(nums []int, target int) []int {
 	numsmap := make(map[int]struct{})
@@ -14,6 +19,6 @@ func twoSum(nums []int, target int) []int {
 
 }
 
-func main() {
-
+func TestSum(t *testing.T) {
+	fmt.Println(twoSum([]int{1, 2, 4}, 3))
 }
