@@ -1,6 +1,9 @@
-package main
+package aug
 
-import "fmt"
+import (
+	"fmt"
+	"testing"
+)
 
 type Example struct {
 	Value int
@@ -20,7 +23,7 @@ func (builder ExampleBuilder) GetExample() *Example {
 	return builder.Example
 }
 
-func main() {
+func TestBuilder(t *testing.T) {
 
 	newbuilder := &ExampleBuilder{&Example{}}
 

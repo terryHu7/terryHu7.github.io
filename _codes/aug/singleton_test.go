@@ -1,6 +1,9 @@
-package main
+package aug
 
-import "fmt"
+import (
+	"fmt"
+	"testing"
+)
 
 type Singletonclass struct {
 	Property int
@@ -16,7 +19,7 @@ func New() *Singletonclass {
 	return OneAndOnlyInstance
 }
 
-func main() {
+func TestSingleton(t *testing.T) {
 	n1 := New()
 	n2 := New()
 	fmt.Printf("%v,%v\n", &n1, &n2)

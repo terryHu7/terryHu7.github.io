@@ -1,6 +1,9 @@
-package main
+package aug
 
-import "fmt"
+import (
+	"fmt"
+	"testing"
+)
 
 type abstract_factory interface {
 	method() (product string)
@@ -34,7 +37,7 @@ func getFactory(option string) abstract_factory {
 
 }
 
-func main() {
+func TestAbstractFactory(t *testing.T) {
 	nike := getFactory("nike")
 	fmt.Println(nike.method())
 }
