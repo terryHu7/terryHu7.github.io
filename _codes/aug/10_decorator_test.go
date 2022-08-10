@@ -20,7 +20,7 @@ type Iphone11Pro struct {
 }
 
 func (i11pro Iphone11Pro) Slogan() string {
-	return i11pro.i11.Slogan() + " Pro"
+	return i11pro.i11.Slogan() + " Pro" //**
 }
 
 func TestDecorator(t *testing.T) {
