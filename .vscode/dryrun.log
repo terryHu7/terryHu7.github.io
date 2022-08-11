@@ -1,0 +1,9 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/hutianyu/MyWetsite/huty1998.github.io'
+echo "123" 
+if [ ! -d mydir ]; then \
+	echo "no" ;\
+	$;\
+fi
+make: Leaving directory '/home/hutianyu/MyWetsite/huty1998.github.io'
+ 
