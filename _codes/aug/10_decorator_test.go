@@ -29,6 +29,9 @@ func TestDecorator(t *testing.T) {
 	decorator := Iphone11Pro{Iphone11{}}
 
 	fmt.Println(decorator.Slogan())
+
+	var pp Phone = Iphone11{}
+	fmt.Println(pp)
 }
 
 //really similar to proxy
