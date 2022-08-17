@@ -1,7 +1,6 @@
 package aug
 
 import (
-	"fmt"
 	. "fmt"
 	"testing"
 )
@@ -22,6 +21,6 @@ func TestInterface(t *testing.T) {
 	Println(struct1.func1())
 
 	var s2 i1 = s1{}
-	fmt.Println(s2)
+	Println(s2)
 
 }

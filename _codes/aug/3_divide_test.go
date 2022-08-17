@@ -6,7 +6,7 @@ import (
 )
 
 func TestDivide(t *testing.T) {
-	fmt.Println(2 * (30 / 30))
+	// fmt.Println(2 * (30 / 30))
 
 	testmap1 := make(map[string]*string)
 	// testmap2 := make(map[string]string)
