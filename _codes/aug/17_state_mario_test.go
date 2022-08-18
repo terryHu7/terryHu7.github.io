@@ -12,6 +12,7 @@ type IMarioState interface {
 	meetMonster(*MarioStateMachine)
 }
 
+////////////////////////////////////////////////////////////////////////////////////////////////
 // Small
 type SmallMario struct{}
 
@@ -35,6 +36,7 @@ func (m *DeadMario) getState() string                     { return "Dead" }
 func (m *DeadMario) obtainMushRoom(sm *MarioStateMachine) {}
 func (m *DeadMario) meetMonster(sm *MarioStateMachine)    {}
 
+////////////////////////////////////////////////////////////////////////////////////////////////
 type MarioStateMachine struct {
 	marioState IMarioState
 }
