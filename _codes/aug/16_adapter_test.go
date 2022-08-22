@@ -1,48 +1,41 @@
 package aug
 
 import (
+	"fmt"
 	"testing"
 )
 
-type Target interface {
-	Request() string
-}
+//plug->covertor->socket
 
+/////////////////
 type Adaptee interface {
-	SpecificRequest() string
+	AdapteeMethod() string
 }
 
-func NewAdaptee() Adaptee {
-	return &adapteeImpl{}
+type AdapteeImpl struct{}
+
+func (*AdapteeImpl) AdapteeMethod() string {
+	return "adaptee"
 }
 
-type adapteeImpl struct{}
+//////////////////
 
-func (*adapteeImpl) SpecificRequest() string {
-	return "adaptee method"
+type Adapter interface {
+	AdapterMethod() string
 }
 
-func NewAdapter(adaptee Adaptee) Target {
-	return &adapter{
-		Adaptee: adaptee,
-	}
-}
-
-type adapter struct {
+type AdapterImpl struct {
 	Adaptee
 }
 
-func (a *adapter) Request() string {
-	return a.SpecificRequest()
+func (a *AdapterImpl) AdapterMethod() string {
+	return a.AdapteeMethod()
 }
 
-var expect = "adaptee method"
-
 func TestAdapter(t *testing.T) {
-	adaptee := NewAdaptee()
-	target := NewAdapter(adaptee)
-	res := target.Request()
-	if res != expect {
-		t.Fatalf("expect: %s, actual: %s", expect, res)
+	adaptee := &AdapteeImpl{}
+	adapter := &AdapterImpl{
+		Adaptee: adaptee,
 	}
+	fmt.Println(adapter.AdapterMethod())
 }
