@@ -8,7 +8,7 @@ tags:
   - Design Pattern
 ---
 
-![](http://www.17bigdata.com/study/static.codebaoku.com/pics/85/e9/85e923603fa9520cbcaa02efbb4bb214.jpg)
+![bridge](http://www.17bigdata.com/study/static.codebaoku.com/pics/85/e9/85e923603fa9520cbcaa02efbb4bb214.jpg)
 
 ```go
 package aug
