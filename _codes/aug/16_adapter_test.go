@@ -8,34 +8,33 @@ import (
 //plug->covertor->socket
 
 /////////////////
-type Adaptee interface {
-	AdapteeMethod() string
+type Socket interface {
+	Charge() string
 }
 
-type AdapteeImpl struct{}
+type TwoHoleSocket struct{}
 
-func (*AdapteeImpl) AdapteeMethod() string {
-	return "adaptee"
+func (*TwoHoleSocket) Charge() string {
+	return "Charging..."
 }
 
 //////////////////
 
-type Adapter interface {
-	AdapterMethod() string
+type Convertor interface {
+	Convert() string
 }
 
-type AdapterImpl struct {
-	Adaptee
+type MyConvertor struct {
+	Socket
 }
 
-func (a *AdapterImpl) AdapterMethod() string {
-	return a.AdapteeMethod()
+func (m *MyConvertor) Convert() string {
+	return m.Charge()
 }
 
 func TestAdapter(t *testing.T) {
-	adaptee := &AdapteeImpl{}
-	adapter := &AdapterImpl{
-		Adaptee: adaptee,
+	convertor := &MyConvertor{
+		Socket: &TwoHoleSocket{}, //covertor->socket
 	}
-	fmt.Println(adapter.AdapterMethod())
+	fmt.Println(convertor.Convert()) //plug->covertor
 }
