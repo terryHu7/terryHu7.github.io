@@ -13,7 +13,7 @@ type WorkerInterface interface {
 	Sleep()
 }
 type Worker struct {
-	WorkerInterface
+	WorkerInterface //extend
 }
 
 func NewWorker(w WorkerInterface) *Worker {
