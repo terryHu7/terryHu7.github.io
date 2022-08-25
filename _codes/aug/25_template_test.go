@@ -5,6 +5,7 @@ import (
 	"testing"
 )
 
+//Everybody is DA GONG REN
 /////////////////////////////////////
 type WorkerInterface interface {
 	GetUp()
