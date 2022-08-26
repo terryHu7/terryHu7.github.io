@@ -6,7 +6,7 @@ import (
 )
 
 type Aggregate interface {
-	Iterator() Iterator
+	NewIterator() Iterator
 }
 
 type Iterator interface {
@@ -26,7 +26,7 @@ func NewNumbers(start, end int) *Numbers {
 	}
 }
 
-func (n *Numbers) Iterator() Iterator {
+func (n *Numbers) NewIterator() Iterator {
 	return &NumbersIterator{
 		numbers: n,
 		next:    n.start,
@@ -65,7 +65,7 @@ func IteratorPrint(i Iterator) {
 func TestExampleIterator(t *testing.T) {
 	aggregate := NewNumbers(1, 10)
 
-	IteratorPrint(aggregate.Iterator())
+	IteratorPrint(aggregate.NewIterator())
 	// Output:
 	// 1
 	// 2
