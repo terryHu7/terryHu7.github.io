@@ -24,3 +24,5 @@ func TestGoroutine(t *testing.T) {
 	time.Sleep(time.Second)
 	fmt.Println(s) // "a"
 }
+
+//git branch test
