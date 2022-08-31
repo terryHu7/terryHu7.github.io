@@ -14,19 +14,20 @@ func QuickSort(nums []int, start, end int) []int {
 	return nums
 }
 
+//***//
 func partition(nums []int, start, end int) int {
-	p := nums[end]
-	i := start
+	p := start
 	for j := start; j < end; j++ {
-		if nums[j] < p {
-			nums[i], nums[j] = nums[j], nums[i]
-			i++
+		if nums[j] < nums[end] {
+			nums[p], nums[j] = nums[j], nums[p]
+			p++
 		}
 	}
-	nums[i], nums[end] = nums[end], nums[i]
-	return i
+	nums[p], nums[end] = nums[end], nums[p]
+	fmt.Println(nums)
+	return p
 }
 
 func TestQuickSort(t *testing.T) {
-	fmt.Println(QuickSort([]int{3, 7, 2, 4, 9, 10, 6}, 0, 6))
+	fmt.Println(QuickSort([]int{3, 7, 2, 4, 9, 10, 6, 8, 5}, 0, 8))
 }
