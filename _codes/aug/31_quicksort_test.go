@@ -1,5 +1,10 @@
 package aug
 
+import (
+	"fmt"
+	"testing"
+)
+
 func QuickSort(nums []int) []int {
 	quickSort(nums, 0, len(nums)-1)
 	return nums
@@ -17,15 +22,14 @@ func partition(nums []int, start, end int) int {
 	i := start
 	for j := start; j < end; j++ {
 		if nums[j] < p {
-			swap(nums, i, j)
+			nums[i], nums[j] = nums[j], nums[i]
 			i++
 		}
 	}
-	swap(nums, i, end)
+	nums[i], nums[end] = nums[end], nums[i]
 	return i
 }
-func swap(nums []int, i, j int) {
-	t := nums[i]
-	nums[i] = nums[j]
-	nums[j] = t
+
+func TestQuickSort(t *testing.T) {
+	fmt.Println(QuickSort([]int{3, 7, 2, 4, 9, 10, 6}))
 }
