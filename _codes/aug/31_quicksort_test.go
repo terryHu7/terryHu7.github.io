@@ -5,18 +5,15 @@ import (
 	"testing"
 )
 
-func QuickSort(nums []int) []int {
-	quickSort(nums, 0, len(nums)-1)
-	return nums
-
-}
-func quickSort(nums []int, start, end int) {
+func QuickSort(nums []int, start, end int) []int {
 	if start < end {
 		pivot := partition(nums, start, end)
-		quickSort(nums, 0, pivot-1)
-		quickSort(nums, pivot+1, end)
+		QuickSort(nums, 0, pivot-1)
+		QuickSort(nums, pivot+1, end)
 	}
+	return nums
 }
+
 func partition(nums []int, start, end int) int {
 	p := nums[end]
 	i := start
@@ -31,5 +28,5 @@ func partition(nums []int, start, end int) int {
 }
 
 func TestQuickSort(t *testing.T) {
-	fmt.Println(QuickSort([]int{3, 7, 2, 4, 9, 10, 6}))
+	fmt.Println(QuickSort([]int{3, 7, 2, 4, 9, 10, 6}, 0, 6))
 }
