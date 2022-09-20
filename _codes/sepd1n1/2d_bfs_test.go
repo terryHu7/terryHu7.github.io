@@ -1,4 +1,4 @@
-package sep_d1n1
+package main
 
 import (
 	"fmt"
