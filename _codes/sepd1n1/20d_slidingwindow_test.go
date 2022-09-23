@@ -1,51 +1,51 @@
 package sep_d1n1
 
 import (
+	"fmt"
 	"math"
 	"testing"
 )
 
 func TestSlidingWin(t *testing.T) {
-
+	fmt.Println(minWindow("ADOBECODEBANC", "ABC"))
 }
 
 func minWindow(s string, t string) string {
-	need, window := map[byte]int{}, map[byte]int{}
+
+	target, window := make(map[byte]int), make(map[byte]int)
 	for i := 0; i < len(t); i++ {
-		need[t[i]]++
+		target[t[i]]++
 	}
-
-	left, right := 0, 0
-	valid := 0
-	start, temp_len := 0, math.MaxInt32
-	for right < len(s) {
-		c := s[right]
+	left, right, oknum := 0, 0, 0
+	res_start, res_len := 0, math.MaxInt32
+	for right < len(s) { //right++
+		r := s[right]
 		right++
-		if need[c] != 0 {
-			window[c]++
-			if window[c] == need[c] {
-				valid++
+		// if _, ok := target[r]; ok {
+		window[r]++
+		if target[r] == window[r] {
+			oknum++
+		}
+		// }
+
+		for oknum == len(t) { //left++
+			l := s[left]
+			if _, ok := target[l]; ok { //before left says byebye
+				if right-left < res_len {
+					res_start = left
+					res_len = right - left
+				}
+				window[l]-- //byebye
+				oknum--
 			}
+			left++
 		}
 
-		for valid == len(need) {
-			if right-left < temp_len {
-				start = left
-				temp_len = right - left
-			}
-			d := s[left]
-			left++
-			if need[d] != 0 {
-				if window[d] == need[d] {
-					valid--
-				}
-				window[d]--
-			}
-		}
 	}
-	if temp_len == math.MaxInt32 {
+
+	if res_len == math.MaxInt32 {
 		return ""
 	} else {
-		return s[start : start+temp_len]
+		return s[res_start : res_start+res_len]
 	}
 }
