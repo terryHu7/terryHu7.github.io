@@ -33,7 +33,7 @@ func minWindow(s string, t string) string {
 
 		for oknum == len(t) { //left++
 			l := s[left]
-			if window[r] == target[r] { //record res before left says byebye
+			if window[l] == target[l] { //record res before left says byebye
 				if right-left < res_len {
 					res_start = left
 					res_len = right - left
