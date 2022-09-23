@@ -6,7 +6,6 @@ import (
 	"testing"
 )
 
-//			 WRONG!//////////////////////////////////////////
 func TestSlidingWin(t *testing.T) {
 	fmt.Println(minWindow("ADOBECODEBANC", "ABC"))
 }
