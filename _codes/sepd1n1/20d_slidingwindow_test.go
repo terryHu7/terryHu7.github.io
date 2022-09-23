@@ -6,6 +6,7 @@ import (
 	"testing"
 )
 
+//			 WRONG!//////////////////////////////////////////
 func TestSlidingWin(t *testing.T) {
 	fmt.Println(minWindow("ADOBECODEBANC", "ABC"))
 }
@@ -16,8 +17,10 @@ func minWindow(s string, t string) string {
 	for i := 0; i < len(t); i++ {
 		target[t[i]]++
 	}
+
 	left, right, oknum := 0, 0, 0
 	res_start, res_len := 0, math.MaxInt32
+
 	for right < len(s) { //right++
 		r := s[right]
 		right++
@@ -30,14 +33,14 @@ func minWindow(s string, t string) string {
 
 		for oknum == len(t) { //left++
 			l := s[left]
-			if _, ok := target[l]; ok { //before left says byebye
+			if window[r] == target[r] { //record res before left says byebye
 				if right-left < res_len {
 					res_start = left
 					res_len = right - left
 				}
-				window[l]-- //byebye
 				oknum--
 			}
+			window[l]-- //byebye
 			left++
 		}
 
