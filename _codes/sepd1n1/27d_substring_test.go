@@ -7,6 +7,7 @@ import (
 
 func TestSubString(t *testing.T) {
 	fmt.Println(slidingWindow("ab", "ab"))
+	fmt.Println(slidingWindow("aa", "aa"))
 	fmt.Println(slidingWindow("ab", "boa"))
 }
 
