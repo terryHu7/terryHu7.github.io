@@ -19,6 +19,7 @@ func slidingWindow(s1, s2 string) bool {
 	for i := 0; i < len(s1); i++ {
 		target[s1[i]]++
 	}
+
 	for right < len(s2) {
 		r := s2[right]
 		right++
@@ -26,10 +27,12 @@ func slidingWindow(s1, s2 string) bool {
 		if window[r] == target[r] {
 			oknum++
 		}
+		///***///
 		for right-left >= len(s1) {
 			if oknum == len(target) {
 				res = true
 			}
+			///***///
 			l := s2[left]
 			left++
 			if window[l] == target[l] {
