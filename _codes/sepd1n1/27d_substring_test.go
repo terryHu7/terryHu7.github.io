@@ -12,7 +12,7 @@ func TestSubString(t *testing.T) {
 
 func slidingWindow(s1, s2 string) bool {
 	left, right := 0, 0
-	oknum := 0
+	okkey := 0
 	res := false
 	target, window := make(map[byte]int), make(map[byte]int)
 
@@ -25,18 +25,18 @@ func slidingWindow(s1, s2 string) bool {
 		right++
 		window[r]++
 		if window[r] == target[r] {
-			oknum++
+			okkey++
 		}
 		///***///
 		for right-left >= len(s1) {
-			if oknum == len(target) {
+			if okkey == len(target) {
 				res = true
 			}
 			///***///
 			l := s2[left]
 			left++
 			if window[l] == target[l] {
-				oknum--
+				okkey--
 			}
 		}
 	}
