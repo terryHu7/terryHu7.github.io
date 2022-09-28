@@ -15,7 +15,7 @@
 <a href="https://space.bilibili.com/14089380"><img src="https://img.shields.io/badge/B站-@labuladong-000000.svg?style=flat-square&logo=Bilibili"></a>
 </p>
 
-![](https://labuladong.github.io/algo/images/souyisou1.png =100x200)
+![](https://labuladong.github.io/algo/images/souyisou1.png)
 
 **通知：[数据结构精品课](https://aep.h5.xeknow.com/s/1XJHEO) 已更新到 V1.9，点击这里体验 [刷题全家桶](https://labuladong.gitee.io/algo/images/others/%E5%85%A8%E5%AE%B6%E6%A1%B6.jpg)。**
 
@@ -33,7 +33,7 @@
 
 本文要解决力扣第 25 题「K 个一组翻转链表」，题目不难理解：
 
-![](https://labuladong.github.io/algo/images/kgroup/title.png =200x)
+![](https://labuladong.github.io/algo/images/kgroup/title.png)
 
 这个问题经常在面经中看到，而且力扣上难度是 Hard，它真的有那么难吗？
 
@@ -45,11 +45,11 @@
 
 什么叫递归性质？直接上图理解，比如说我们对这个链表调用 `reverseKGroup(head, 2)`，即以 2 个节点为一组反转链表：
 
-![](https://labuladong.github.io/algo/images/kgroup/1.jpg =x100)
+![](https://labuladong.github.io/algo/images/kgroup/1.jpg)
 
 如果我设法把前 2 个节点反转，那么后面的那些节点怎么处理？后面的这些节点也是一条链表，而且规模（长度）比原来这条链表小，这就叫**子问题**。
 
-![](https://labuladong.github.io/algo/images/kgroup/2.jpg =x200)
+![](https://labuladong.github.io/algo/images/kgroup/2.jpg)
 
 我们可以把原先的 `head` 指针移动到后面这一段链表的开头，然后继续递归调用 `reverseKGroup(head, 2)`，因为子问题（后面这部分链表）和原问题（整条链表）的结构完全相同，这就是所谓的递归性质。
 
