@@ -15,7 +15,7 @@
 <a href="https://space.bilibili.com/14089380"><img src="https://img.shields.io/badge/B站-@labuladong-000000.svg?style=flat-square&logo=Bilibili"></a>
 </p>
 
-<img src="https://labuladong.github.io/algo/images/souyisou1.png" width="300">
+<img src="https://labuladong.github.io/algo/images/souyisou1.png" width="400">
 
 ![](https://labuladong.github.io/algo/images/souyisou1.png)
 
