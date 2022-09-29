@@ -8,6 +8,7 @@ import (
 	"strings"
 )
 
+//
 var inPath, outPath *string
 
 func init() {
