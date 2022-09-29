@@ -8,7 +8,7 @@ import (
 	"strings"
 )
 
-//
+//Usage: ./markdown2html -inPath "./tmp.txt" -outPath "./newtmp.txt"
 var inPath, outPath *string
 
 func init() {
