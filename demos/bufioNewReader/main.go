@@ -10,6 +10,8 @@ import (
 )
 
 func main() {
+	//input "1,2,3"
+	//output []int{1,2,3}
 	input := bufio.NewReader(os.Stdin)
 	for {
 		line, err := input.ReadString('\n')
@@ -17,9 +19,9 @@ func main() {
 		nums := []int{}
 		for i := 0; i < len(s); i++ {
 			num, _ := strconv.Atoi(s[i])
-			fmt.Printf("num: %v\n", num)
-			//append
+			nums = append(nums, num)
 		}
+		fmt.Printf("nums: %v\n", nums)
 		if err == io.EOF {
 			fmt.Println("END")
 			break
