@@ -3,7 +3,6 @@ package main
 import (
 	"bufio"
 	"flag"
-	"fmt"
 	"io"
 	"os"
 	"strings"
@@ -17,8 +16,11 @@ func init() {
 
 func main() {
 	flag.Parse()
+	md2html(*filePath)
+}
 
-	fd, err := os.OpenFile(*filePath, os.O_RDWR, 0666)
+func md2html(filePath string) {
+	fd, err := os.OpenFile(filePath, os.O_RDWR, 0666)
 	if err != nil {
 		panic("wrong filePath")
 	}
@@ -28,14 +30,12 @@ func main() {
 	pos := int64(0)
 	for {
 		line, err := r.ReadString('\n')
-		fmt.Printf("line: %v", line)
+
 		if strings.HasPrefix(line, "![](") && strings.HasSuffix(line, "g)\n") {
 			image := line[4 : len(line)-2]
-			fmt.Printf("image: %v\n", image)
 			bytes := []byte("<img src=\"" + image + "\" width=\"400\">" + "\n")
-			fmt.Printf("pos: %v\n", pos)
 			fd.WriteAt(bytes, pos)
-			pos += (int64(len(bytes) - len(line)))
+			pos += (int64(len(bytes)))
 		} else {
 			pos += int64(len(line))
 		}
