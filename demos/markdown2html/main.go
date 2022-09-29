@@ -36,12 +36,14 @@ func md2html(inPath, outPath string) {
 	for {
 		line, err := r.ReadString('\n')
 
-		if strings.HasPrefix(line, "![](") && strings.HasSuffix(line, "g)\n") {
-			image := line[4 : len(line)-2]
-			bytes := []byte("<img src=\"" + image + "\" width=\"400\">" + "\n")
-			outfd.WriteString(string(bytes))
-		} else {
-			outfd.WriteString(line)
+		if strings.HasPrefix(line, "![](") {
+			if strings.HasSuffix(line, "g)\n") || strings.HasSuffix(line, "f)\n") {
+				image := line[4 : len(line)-2]
+				bytes := []byte("<img src=\"" + image + "\" width=\"400\">" + "\n")
+				outfd.WriteString(string(bytes))
+			} else {
+				outfd.WriteString(line)
+			}
 		}
 
 		// cmd := exec.Command("sed", "-r", "-i", "")
