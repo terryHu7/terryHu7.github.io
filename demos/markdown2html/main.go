@@ -41,9 +41,9 @@ func md2html(inPath, outPath string) {
 				image := line[4 : len(line)-2]
 				bytes := []byte("<img src=\"" + image + "\" width=\"400\">" + "\n")
 				outfd.WriteString(string(bytes))
-			} else {
-				outfd.WriteString(line)
 			}
+		} else {
+			outfd.WriteString(line)
 		}
 
 		// cmd := exec.Command("sed", "-r", "-i", "")
