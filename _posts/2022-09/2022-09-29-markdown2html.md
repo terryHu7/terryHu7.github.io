@@ -7,7 +7,7 @@ header-style: text
 tags:
   - Golang
 ---
-//Usage: `./markdown2html -inPath "./tmp.txt" -outPath "./newtmp.txt"`
+Usage: `./markdown2html -inPath "./tmp.txt" -outPath "./newtmp.txt"`
 ```golang
 package main
 
