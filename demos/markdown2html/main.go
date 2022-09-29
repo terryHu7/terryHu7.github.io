@@ -25,7 +25,10 @@ func md2html(inPath, outPath string) {
 	if err != nil {
 		panic("fail to open inPath")
 	}
-	defer infd.Close()
+	defer func() {
+		infd.Close()
+		// os.Remove(inPath)
+	}()
 
 	outfd, err := os.OpenFile(outPath, os.O_RDWR|os.O_CREATE, 0766)
 	if err != nil {
