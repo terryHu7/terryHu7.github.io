@@ -26,9 +26,9 @@ func main() {
 	// }
 	ffmpegCmdStr := "-i /home/hutianyu/test.mp4 -c copy ./output.mp4 -y"
 
-	pid, err := executeFfmpeg(ffmpegCmdStr)
-	if err == nil {
-		addTasksIntoCgroups("ffmpeg_groups", 150000, 1000000, pid)
+	pid, _ := executeFfmpeg(ffmpegCmdStr)
+	if pid != 0 {
+		addTasksIntoCgroups("ffmpeg_group", 150000, 1000000, pid)
 	}
 
 }
@@ -60,7 +60,7 @@ func addTasksIntoCgroups(cgPath string, quota int64, period uint64, pid int) {
 		return
 	}
 	defer control.Delete()
-	if err = control.AddTask(cgroups.Process{Pid: pid}, "cpu", "ffmpeg_groups"); err != nil {
+	if err = control.AddTask(cgroups.Process{Pid: pid}, "cpu", "ffmpeg_group"); err != nil {
 		log.Fatal(err)
 		return
 	}
