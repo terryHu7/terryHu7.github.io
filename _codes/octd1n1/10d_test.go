@@ -10,21 +10,21 @@ func TestMonoQ(t *testing.T) {
 }
 
 func maxSlidingWindow(nums []int, k int) []int {
-	monotonic_q := []int{}
-	var res []int
+	monotonicQ, res := []int{}, []int{}
+
 	for right := 0; right < len(nums); right++ {
-
-		for len(monotonic_q) > 0 && nums[right] >= monotonic_q[len(monotonic_q)-1] {
-			monotonic_q = monotonic_q[:len(monotonic_q)-1]
+		//push
+		for len(monotonicQ) > 0 && monotonicQ[len(monotonicQ)-1] <= nums[right] {
+			monotonicQ = monotonicQ[:len(monotonicQ)-1]
 		}
-		monotonic_q = append(monotonic_q, nums[right])
-
-		// fmt.Println(monotonic_q)
+		monotonicQ = append(monotonicQ, nums[right])
 
 		if right >= k-1 {
-			res = append(res, monotonic_q[0])
-			if nums[right-k+1] == monotonic_q[0] {
-				monotonic_q = monotonic_q[1:]
+			//res
+			res = append(res, monotonicQ[0])
+			//pop
+			if nums[right-k+1] == monotonicQ[0] {
+				monotonicQ = monotonicQ[1:]
 			}
 		}
 
