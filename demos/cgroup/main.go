@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"log"
 	"os/exec"
 	"strings"
@@ -24,13 +25,19 @@ func main() {
 	// 	fd.WriteString(fmt.Sprint(count))
 	// 	time.Sleep(time.Second)
 	// }
-	ffmpegCmdStr := "-i /home/hutianyu/test.mp4 -c copy ./output.mp4 -y"
+	// mask := syscall.Umask(0)
+	// defer syscall.Umask(mask)
+	// os.MkdirAll("/sys/fs/cgroup/cpu/ffmpegtmp/", 0777)
 
-	pid, _ := executeFfmpeg(ffmpegCmdStr)
-	if pid != 0 {
-		addTasksIntoCgroups("ffmpeg_group", 150000, 1000000, pid)
-	}
+	// ffmpegCmdStr := "-i /home/hutianyu/test.mp4 ./output.mp4 -y"
 
+	// pid, _ := executeFfmpeg(ffmpegCmdStr)
+	// if pid != 0 {
+	// addTasksIntoCgroups("ffmpegtmp2", 150000, 1000000, 0)
+	// }
+	a := []int{1, 2, 3}
+	a = append(a, a[3:]...)
+	fmt.Println(a)
 }
 
 func executeFfmpeg(ffmpegCmdStr string) (pid int, err error) {
@@ -42,6 +49,7 @@ func executeFfmpeg(ffmpegCmdStr string) (pid int, err error) {
 	}
 
 	if cmd.Process != nil {
+		log.Printf("pid: %v", cmd.Process.Pid)
 		return cmd.Process.Pid, nil
 	} else {
 		return 0, nil
@@ -56,15 +64,16 @@ func addTasksIntoCgroups(cgPath string, quota int64, period uint64, pid int) {
 		},
 	})
 	if err != nil {
+		log.Printf("controlgroup: %+v", control)
 		log.Fatal(err)
 		return
 	}
-	defer control.Delete()
-	if err = control.AddTask(cgroups.Process{Pid: pid}, "cpu", "ffmpeg_group"); err != nil {
-		log.Fatal(err)
-		return
-	}
-	if tasks, err := control.Tasks(cgroups.Cpu, false); err == nil {
-		log.Printf("Current tasks: %v", tasks)
-	}
+	// // defer control.Delete()
+	// if err = control.AddTask(cgroups.Process{Pid: pid}, "cpu", "ffmpegtmp"); err != nil {
+	// 	log.Fatal(err)
+	// 	return
+	// }
+	// if tasks, err := control.Tasks(cgroups.Cpu, false); err == nil {
+	// 	log.Printf("Current tasks: %v", tasks)
+	// }
 }
