@@ -3,6 +3,7 @@ package main
 import (
 	"gorm.io/driver/sqlite"
 	"gorm.io/gorm"
+	"gorm.io/gorm/logger"
 )
 
 type Man struct {
@@ -23,7 +24,10 @@ type Bro struct {
 }
 
 func main() {
-	db, err := gorm.Open(sqlite.Open("test.db"), &gorm.Config{})
+
+	db, err := gorm.Open(sqlite.Open("test.db"), &gorm.Config{
+		Logger: logger.Default.LogMode(logger.Info),
+	})
 	if err != nil {
 		panic("failed to connect database")
 	}
@@ -31,19 +35,23 @@ func main() {
 	//mapping to db
 	db.AutoMigrate(&Man{}, &Woman{}, &Bro{})
 
-	man := Man{
-		ID:   1,
-		Name: "ManA",
-		Woman: Woman{
-			Name: "WifeA",
-		},
-		Bros: []Bro{
-			{Id: 1, Name: "bro1"},
-			{Id: 2, Name: "bro1"},
-		},
+	// man := Man{
+	// 	ID:   1,
+	// 	Name: "ManA",
+	// 	Woman: Woman{
+	// 		Name: "WifeA",
+	// 	},
+	// 	Bros: []Bro{
+	// 		{Id: 1, Name: "bro1"},
+	// 		{Id: 2, Name: "bro1"},
+	// 	},
+	// }
+	tmp := Bro{
+		Id:   2,
+		Name: "bro2",
 	}
-	// db.Create(&man)
-	db.Create(&man)
+	db.Create(&tmp)
+	// db.Debug().Create(&man)
 
 	// Create
 	// db.Create(&Product{Name: "P2", Price: 200})
