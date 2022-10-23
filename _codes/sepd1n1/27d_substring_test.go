@@ -6,9 +6,7 @@ import (
 )
 
 func TestSubString(t *testing.T) {
-	fmt.Println(slidingWindow("ab", "ab"))
-	fmt.Println(slidingWindow("aa", "aa"))
-	fmt.Println(slidingWindow("ab", "boa"))
+	fmt.Println(slidingWindow("ab", "eidboaoo"))
 }
 
 func slidingWindow(s1, s2 string) bool {
@@ -29,7 +27,7 @@ func slidingWindow(s1, s2 string) bool {
 			okkey++
 		}
 		///***///
-		for right-left >= len(s1) { //len-1?
+		if right-left == len(s1) { //len-1?
 			if okkey == len(target) {
 				res = true
 			}
