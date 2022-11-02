@@ -96,9 +96,9 @@ func SplitMedia(filePath string, splitMethod string, splitUnit int, format strin
 				segmentTimes = append(segmentTimes, strconv.FormatInt(int64(curDuration), 10))
 			}
 			// split the next part
-			ffmpegCmdStr := fmt.Sprintf("-i %s -ss %d -fs %d -c copy %s", filePath, curDuration, splitUnit, nextFilename)
+			ffmpegCmdStr := fmt.Sprintf("-ss %d -i %s -fs %d -c copy %s", curDuration, filePath, splitUnit, nextFilename)
 			if format == "mp4" {
-				ffmpegCmdStr = fmt.Sprintf("-i %s -ss %d -fs %d -c copy -movflags +faststart %s", filePath, curDuration, splitUnit, nextFilename)
+				ffmpegCmdStr = fmt.Sprintf("-ss %d -i %s -fs %d -c copy -movflags +faststart %s", curDuration, filePath, splitUnit, nextFilename)
 			}
 			err := executeFfmpeg(ffmpegCmdStr)
 			if err != nil {
