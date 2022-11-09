@@ -28,8 +28,6 @@ uname -v = #147~18.04.1-Ubuntu SMP Sat Oct 15 13:10:18 UTC 2022
 /bin/universe          = unknown
 
 PATH: /home/hutianyu/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/
-PATH: /usr/local/go/bin
-PATH: /home/hutianyu/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/
 PATH: /home/hutianyu/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/
 PATH: /usr/local/sbin
 PATH: /usr/local/bin
@@ -40,10 +38,6 @@ PATH: /bin
 PATH: /usr/games
 PATH: /usr/local/games
 PATH: /snap/bin
-PATH: /usr/local/go/bin
-PATH: /home/hutianyu/goProjects/bin
-PATH: /usr/local/go/bin
-PATH: /home/hutianyu/goProjects/bin
 PATH: /usr/local/go/bin
 PATH: /home/hutianyu/goProjects/bin
 PATH: /usr/local/go/bin
@@ -289,7 +283,7 @@ configure: failed program was:
 configure:5270: result: no
 configure:5168: checking whether pthreads work without any flags
 configure:5261: gcc -o conftest -g -O2    conftest.c   >&5
-/tmp/ccDRw2Jm.o: In function `main':
+/tmp/ccMhVV9F.o: In function `main':
 /home/hutianyu/MyWetsite/huty1998.github.io/demos/gource-0.53/conftest.c:20: undefined reference to `pthread_join'
 /home/hutianyu/MyWetsite/huty1998.github.io/demos/gource-0.53/conftest.c:22: undefined reference to `__pthread_register_cancel'
 /home/hutianyu/MyWetsite/huty1998.github.io/demos/gource-0.53/conftest.c:23: undefined reference to `pthread_create'
@@ -916,7 +910,7 @@ configure: failed program was:
 configure:6105: result: no
 configure:6124: checking for OpenGL Utility library
 configure:6181: g++ -o conftest -g -O2 -pthread   -lGL  conftest.cpp  >&5
-/tmp/cclUjp0S.o: In function `main':
+/tmp/ccJaoKHt.o: In function `main':
 /home/hutianyu/MyWetsite/huty1998.github.io/demos/gource-0.53/conftest.cpp:40: undefined reference to `gluBeginCurve'
 collect2: error: ld returned 1 exit status
 configure:6181: $? = 1
@@ -1079,29 +1073,93 @@ configure:6463: $? = 0
 configure:6518: result: yes
 configure:6524: checking for PCRE2
 configure:6532: $PKG_CONFIG --exists --print-errors "libpcre2-8"
-Package libpcre2-8 was not found in the pkg-config search path.
-Perhaps you should add the directory containing `libpcre2-8.pc'
-to the PKG_CONFIG_PATH environment variable
-No package 'libpcre2-8' found
-configure:6535: $? = 1
+configure:6535: $? = 0
 configure:6550: $PKG_CONFIG --exists --print-errors "libpcre2-8"
-Package libpcre2-8 was not found in the pkg-config search path.
-Perhaps you should add the directory containing `libpcre2-8.pc'
-to the PKG_CONFIG_PATH environment variable
-No package 'libpcre2-8' found
-configure:6553: $? = 1
-No package 'libpcre2-8' found
-configure:6581: error: Package requirements (libpcre2-8) were not met:
+configure:6553: $? = 0
+configure:6608: result: yes
+configure:6614: checking for GLEW
+configure:6622: $PKG_CONFIG --exists --print-errors "glew"
+configure:6625: $? = 0
+configure:6640: $PKG_CONFIG --exists --print-errors "glew"
+configure:6643: $? = 0
+configure:6698: result: yes
+configure:6704: checking for SDL2
+configure:6712: $PKG_CONFIG --exists --print-errors "sdl2 SDL2_image"
+configure:6715: $? = 0
+configure:6730: $PKG_CONFIG --exists --print-errors "sdl2 SDL2_image"
+configure:6733: $? = 0
+configure:6788: result: yes
+configure:6794: checking for PNG
+configure:6802: $PKG_CONFIG --exists --print-errors "libpng >= 1.2"
+configure:6805: $? = 0
+configure:6820: $PKG_CONFIG --exists --print-errors "libpng >= 1.2"
+configure:6823: $? = 0
+configure:6878: result: yes
+configure:6888: checking for IMG_LoadPNG_RW
+configure:6888: g++ -o conftest -g -O2 -pthread -pthread  -pthread -pthread -I/usr/include/freetype2 -I/usr/include/libpng16  -I/usr/include/libdrm -D_REENTRANT -I/usr/include/SDL2 -I/usr/include/libpng16  conftest.cpp  -lGL  -lGLU -lfreetype -lpcre2-8 -lGLEW -lGLU -lGL -lSDL2_image -lSDL2 -lpng16 -lz >&5
+configure:6888: $? = 0
+configure:6888: result: yes
+configure:6901: checking for IMG_LoadJPG_RW
+configure:6901: g++ -o conftest -g -O2 -pthread -pthread  -pthread -pthread -I/usr/include/freetype2 -I/usr/include/libpng16  -I/usr/include/libdrm -D_REENTRANT -I/usr/include/SDL2 -I/usr/include/libpng16  conftest.cpp  -lGL  -lGLU -lfreetype -lpcre2-8 -lGLEW -lGLU -lGL -lSDL2_image -lSDL2 -lpng16 -lz >&5
+configure:6901: $? = 0
+configure:6901: result: yes
+configure:7051: checking for boostlib >= 1.46 (104600)
+configure:7083: g++ -c -g -O2 -pthread -pthread  -pthread -pthread -I/usr/include/freetype2 -I/usr/include/libpng16  -I/usr/include/libdrm -D_REENTRANT -I/usr/include/SDL2 -I/usr/include/libpng16 -I/usr/include conftest.cpp >&5
+configure:7083: $? = 0
+configure:7085: result: yes
+configure:7277: checking whether the Boost::System library is available
+configure:7302: g++ -c   -pthread -pthread -I/usr/include/freetype2 -I/usr/include/libpng16  -I/usr/include/libdrm -D_REENTRANT -I/usr/include/SDL2 -I/usr/include/libpng16 -I/usr/include conftest.cpp >&5
+configure:7302: $? = 0
+configure:7317: result: yes
+configure:7332: checking for exit in -lboost_system
+configure:7357: g++ -o conftest -g -O2 -pthread -pthread  -pthread -pthread -I/usr/include/freetype2 -I/usr/include/libpng16  -I/usr/include/libdrm -D_REENTRANT -I/usr/include/SDL2 -I/usr/include/libpng16 -I/usr/include  -L/usr/lib/x86_64-linux-gnu conftest.cpp -lboost_system   -lGL  -lGLU -lfreetype -lpcre2-8 -lGLEW -lGLU -lGL -lSDL2_image -lSDL2 -lpng16 -lz >&5
+conftest.cpp:37:6: warning: declaration of 'char exit()' conflicts with built-in declaration 'void exit(int)' [-Wbuiltin-declaration-mismatch]
+ char exit ();
+      ^~~~
+configure:7357: $? = 0
+configure:7367: result: yes
+configure:7522: checking whether the Boost::Filesystem library is available
+configure:7546: g++ -c -g -O2 -pthread -pthread  -pthread -pthread -I/usr/include/freetype2 -I/usr/include/libpng16  -I/usr/include/libdrm -D_REENTRANT -I/usr/include/SDL2 -I/usr/include/libpng16 -I/usr/include conftest.cpp >&5
+configure:7546: $? = 0
+configure:7560: result: yes
+configure:7571: checking for exit in -lboost_filesystem
+configure:7596: g++ -o conftest -g -O2 -pthread -pthread  -pthread -pthread -I/usr/include/freetype2 -I/usr/include/libpng16  -I/usr/include/libdrm -D_REENTRANT -I/usr/include/SDL2 -I/usr/include/libpng16 -I/usr/include  -L/usr/lib/x86_64-linux-gnu conftest.cpp -lboost_filesystem   -lGL  -lGLU -lfreetype -lpcre2-8 -lGLEW -lGLU -lGL -lSDL2_image -lSDL2 -lpng16 -lz -lboost_system >&5
+conftest.cpp:38:6: warning: declaration of 'char exit()' conflicts with built-in declaration 'void exit(int)' [-Wbuiltin-declaration-mismatch]
+ char exit ();
+      ^~~~
+configure:7596: $? = 0
+configure:7606: result: yes
+configure:7766: checking glm/glm.hpp usability
+configure:7766: g++ -c -g -O2 -pthread -pthread  -pthread -pthread -I/usr/include/freetype2 -I/usr/include/libpng16  -I/usr/include/libdrm -D_REENTRANT -I/usr/include/SDL2 -I/usr/include/libpng16 -I/usr/include conftest.cpp >&5
+configure:7766: $? = 0
+configure:7766: result: yes
+configure:7766: checking glm/glm.hpp presence
+configure:7766: g++ -E  -pthread -pthread -I/usr/include/freetype2 -I/usr/include/libpng16  -I/usr/include/libdrm -D_REENTRANT -I/usr/include/SDL2 -I/usr/include/libpng16 -I/usr/include conftest.cpp
+configure:7766: $? = 0
+configure:7766: result: yes
+configure:7766: checking for glm/glm.hpp
+configure:7766: result: yes
+configure:7983: checking that generated files are newer than configure
+configure:7989: result: done
+configure:8028: creating ./config.status
 
-No package 'libpcre2-8' found
+## ---------------------- ##
+## Running config.status. ##
+## ---------------------- ##
 
-Consider adjusting the PKG_CONFIG_PATH environment variable if you
-installed software in a non-standard prefix.
+This file was extended by Gource config.status 0.53, which was
+generated by GNU Autoconf 2.69.  Invocation command line was
 
-Alternatively, you may set the environment variables PCRE2_CFLAGS
-and PCRE2_LIBS to avoid the need to call pkg-config.
-See the pkg-config man page for more details.
+  CONFIG_FILES    = 
+  CONFIG_HEADERS  = 
+  CONFIG_LINKS    = 
+  CONFIG_COMMANDS = 
+  $ ./config.status 
 
+on user
+
+config.status:828: creating Makefile
+config.status:1000: executing depfiles commands
 
 ## ---------------- ##
 ## Cache variables. ##
@@ -1160,6 +1218,8 @@ ac_cv_env_host_alias_set=
 ac_cv_env_host_alias_value=
 ac_cv_env_target_alias_set=
 ac_cv_env_target_alias_value=
+ac_cv_func_IMG_LoadJPG_RW=yes
+ac_cv_func_IMG_LoadPNG_RW=yes
 ac_cv_func_timegm=yes
 ac_cv_func_unsetenv=yes
 ac_cv_have_x='have_x=yes	ac_x_includes='\'''\''	ac_x_libraries='\'''\'''
@@ -1167,6 +1227,7 @@ ac_cv_header_GL_gl_h=yes
 ac_cv_header_GL_glu_h=yes
 ac_cv_header_OpenGL_gl_h=no
 ac_cv_header_OpenGL_glu_h=no
+ac_cv_header_glm_glm_hpp=yes
 ac_cv_header_inttypes_h=yes
 ac_cv_header_memory_h=yes
 ac_cv_header_stdc=yes
@@ -1179,6 +1240,8 @@ ac_cv_header_sys_types_h=yes
 ac_cv_header_unistd_h=yes
 ac_cv_header_windows_h=no
 ac_cv_host=x86_64-pc-linux-gnu
+ac_cv_lib_boost_filesystem___exit=yes
+ac_cv_lib_boost_system___exit=yes
 ac_cv_objext=o
 ac_cv_path_EGREP='/bin/grep -E'
 ac_cv_path_GREP=/bin/grep
@@ -1199,12 +1262,22 @@ am_cv_CC_dependencies_compiler_type=gcc3
 am_cv_CXX_dependencies_compiler_type=gcc3
 am_cv_make_support_nested_variables=yes
 am_cv_prog_cc_c_o=yes
+ax_cv_boost_filesystem=yes
+ax_cv_boost_system=yes
 ax_cv_c_compiler_ms=no
 ax_cv_check_gl_libgl=-lGL
 ax_cv_check_glu_libglu=-lGLU
 ax_cv_varargs_glu_tesscb=no
 pkg_cv_FT2_CFLAGS='-I/usr/include/freetype2 -I/usr/include/libpng16'
 pkg_cv_FT2_LIBS=-lfreetype
+pkg_cv_GLEW_CFLAGS=-I/usr/include/libdrm
+pkg_cv_GLEW_LIBS='-lGLEW -lGLU -lGL'
+pkg_cv_PCRE2_CFLAGS=
+pkg_cv_PCRE2_LIBS=-lpcre2-8
+pkg_cv_PNG_CFLAGS=-I/usr/include/libpng16
+pkg_cv_PNG_LIBS='-lpng16 -lz'
+pkg_cv_SDL2_CFLAGS='-D_REENTRANT -I/usr/include/SDL2'
+pkg_cv_SDL2_LIBS='-lSDL2_image -lSDL2'
 
 ## ----------------- ##
 ## Output variables. ##
@@ -1223,21 +1296,21 @@ AUTOCONF='${SHELL} /home/hutianyu/MyWetsite/huty1998.github.io/demos/gource-0.53
 AUTOHEADER='${SHELL} /home/hutianyu/MyWetsite/huty1998.github.io/demos/gource-0.53/build-aux/missing autoheader'
 AUTOMAKE='${SHELL} /home/hutianyu/MyWetsite/huty1998.github.io/demos/gource-0.53/build-aux/missing automake-1.15'
 AWK='mawk'
-BOOST_CPPFLAGS=''
-BOOST_FILESYSTEM_LIB=''
-BOOST_LDFLAGS=''
-BOOST_SYSTEM_LIB=''
+BOOST_CPPFLAGS='-I/usr/include'
+BOOST_FILESYSTEM_LIB='-lboost_filesystem'
+BOOST_LDFLAGS='-L/usr/lib/x86_64-linux-gnu'
+BOOST_SYSTEM_LIB='-lboost_system'
 CC='gcc'
 CCDEPMODE='depmode=gcc3'
 CFLAGS='-g -O2'
 CPP='gcc -E'
-CPPFLAGS=' -pthread -pthread'
+CPPFLAGS=' -pthread -pthread -I/usr/include/freetype2 -I/usr/include/libpng16  -I/usr/include/libdrm -D_REENTRANT -I/usr/include/SDL2 -I/usr/include/libpng16 -I/usr/include'
 CXX='g++'
 CXXCPP='g++ -E'
 CXXDEPMODE='depmode=gcc3'
 CXXFLAGS='-g -O2 -pthread -pthread'
 CYGPATH_W='echo'
-DEFS=''
+DEFS='-DPACKAGE_NAME=\"Gource\" -DPACKAGE_TARNAME=\"gource\" -DPACKAGE_VERSION=\"0.53\" -DPACKAGE_STRING=\"Gource\ 0.53\" -DPACKAGE_BUGREPORT=\"acaudwell@gmail.com\" -DPACKAGE_URL=\"\" -DPACKAGE=\"gource\" -DVERSION=\"0.53\" -DHAVE_TIMEGM=1 -DHAVE_UNSETENV=1 -DHAVE_PTHREAD=1 -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_GL_GL_H=1 -DHAVE_GL_GLU_H=1 -DHAVE_IMG_LOADPNG_RW=1 -DHAVE_IMG_LOADJPG_RW=1 -DHAVE_BOOST=/\*\*/ -DHAVE_BOOST_SYSTEM=/\*\*/ -DHAVE_BOOST_FILESYSTEM=/\*\*/'
 DEPDIR='.deps'
 ECHO_C=''
 ECHO_N='-n'
@@ -1245,13 +1318,13 @@ ECHO_T=''
 EGREP='/bin/grep -E'
 EXEEXT=''
 FONTDIR_FALSE=''
-FONTDIR_TRUE=''
+FONTDIR_TRUE='#'
 FONTFILE_FALSE=''
-FONTFILE_TRUE=''
+FONTFILE_TRUE='#'
 FT2_CFLAGS='-I/usr/include/freetype2 -I/usr/include/libpng16'
 FT2_LIBS='-lfreetype'
-GLEW_CFLAGS=''
-GLEW_LIBS=''
+GLEW_CFLAGS='-I/usr/include/libdrm'
+GLEW_LIBS='-lGLEW -lGLU -lGL'
 GLU_CFLAGS='-pthread'
 GLU_LIBS='-lGLU'
 GL_CFLAGS='-pthread'
@@ -1263,7 +1336,7 @@ INSTALL_SCRIPT='${INSTALL}'
 INSTALL_STRIP_PROGRAM='$(install_sh) -c -s'
 LDFLAGS=''
 LIBOBJS=''
-LIBS=' -lGL  -lGLU'
+LIBS=' -lGL  -lGLU -lfreetype -lpcre2-8 -lGLEW -lGLU -lGL -lSDL2_image -lSDL2 -lpng16 -lz -lboost_system -lboost_filesystem'
 LTLIBOBJS=''
 MAKEINFO='${SHELL} /home/hutianyu/MyWetsite/huty1998.github.io/demos/gource-0.53/build-aux/missing makeinfo'
 MKDIR_P='/bin/mkdir -p'
@@ -1277,27 +1350,27 @@ PACKAGE_URL=''
 PACKAGE_VERSION='0.53'
 PATH_SEPARATOR=':'
 PCRE2_CFLAGS=''
-PCRE2_LIBS=''
+PCRE2_LIBS='-lpcre2-8'
 PKG_CONFIG='/usr/bin/pkg-config'
-PNG_CFLAGS=''
-PNG_LIBS=''
+PNG_CFLAGS='-I/usr/include/libpng16'
+PNG_LIBS='-lpng16 -lz'
 PTHREAD_CC='gcc'
 PTHREAD_CFLAGS='-pthread'
 PTHREAD_LIBS=''
-SDL2_CFLAGS=''
-SDL2_LIBS=''
+SDL2_CFLAGS='-D_REENTRANT -I/usr/include/SDL2'
+SDL2_LIBS='-lSDL2_image -lSDL2'
 SED='/bin/sed'
 SET_MAKE=''
 SHELL='/bin/bash'
 STRIP=''
-USE_BUNDLED_TINYXML_FALSE=''
+USE_BUNDLED_TINYXML_FALSE='#'
 USE_BUNDLED_TINYXML_TRUE=''
 VERSION='0.53'
 XMKMF=''
 ac_ct_CC='gcc'
 ac_ct_CXX='g++'
 am__EXEEXT_FALSE=''
-am__EXEEXT_TRUE=''
+am__EXEEXT_TRUE='#'
 am__fastdepCC_FALSE='#'
 am__fastdepCC_TRUE=''
 am__fastdepCXX_FALSE='#'
@@ -1320,7 +1393,7 @@ datadir='${datarootdir}'
 datarootdir='${prefix}/share'
 docdir='${datarootdir}/doc/${PACKAGE_TARNAME}'
 dvidir='${docdir}'
-exec_prefix='NONE'
+exec_prefix='${prefix}'
 gourcefontdir=''
 gourcefontfile=''
 host='x86_64-pc-linux-gnu'
@@ -1340,7 +1413,7 @@ mandir='${datarootdir}/man'
 mkdir_p='$(MKDIR_P)'
 oldincludedir='/usr/include'
 pdfdir='${docdir}'
-prefix='NONE'
+prefix='/usr/local'
 program_transform_name='s,x,x,'
 psdir='${docdir}'
 runstatedir='${localstatedir}/run'
@@ -1377,5 +1450,10 @@ target_alias=''
 #define HAVE_UNISTD_H 1
 #define HAVE_GL_GL_H 1
 #define HAVE_GL_GLU_H 1
+#define HAVE_IMG_LOADPNG_RW 1
+#define HAVE_IMG_LOADJPG_RW 1
+#define HAVE_BOOST /**/
+#define HAVE_BOOST_SYSTEM /**/
+#define HAVE_BOOST_FILESYSTEM /**/
 
-configure: exit 1
+configure: exit 0
