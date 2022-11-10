@@ -6,7 +6,7 @@ author: "Terry"
 header-style: text
 tags:
   - Git
-  - Shell
+  - Bash
 ---
 
 After getting tired of entering three-way git commands (add, commit and then push), I write a bash script just for the convience, named `piu.sh`. 
