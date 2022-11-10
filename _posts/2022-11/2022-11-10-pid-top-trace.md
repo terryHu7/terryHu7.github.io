@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Top Trace"
+title: "top -c -d 1 -n 20 -b -p $! > ./toptrace_${date}.txt"
 subtitle: ''
 author: "Terry"
 header-style: text
