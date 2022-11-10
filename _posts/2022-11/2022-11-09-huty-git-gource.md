@@ -9,7 +9,7 @@ tags:
 ---
 
 
-![](../hutygit.mp4)
+![](https://github.com/huty1998/huty1998.github.io/blob/main/_posts/2022-11/hutygit.mp4)
 
 
 ```bash 
