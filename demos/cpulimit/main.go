@@ -10,18 +10,16 @@ import (
 var cpulimitpid int
 
 func main() {
-	// defer func() {
-	// 	killcpulimit := exec.Command("killall", "cpulimit")
-	// 	if err := killcpulimit.Run(); err != nil {
-	// 		fmt.Printf("killall cpulimit err: %v\n", err.Error())
-	// 	} else {
-	// 		fmt.Println("defer killall cpulimit")
-	// 	}
-	// }()
+	defer func() {
+		killcpulimit := exec.Command("killall", "cpulimit")
+		if err := killcpulimit.Run(); err != nil {
+			fmt.Printf("killall cpulimit err: %v\n", err.Error())
+		}
+	}()
 	fmt.Println("mark 1-----------------------")
 	cpulimitcmd := exec.Command("/usr/bin/eswin/cpulimit", "-e", "/usr/bin/ffmpeg", "-l", "500", "-b")
 	fmt.Println("cpulimit.Run starting--------------------------------")
-	if cpuerr := cpulimitcmd.Start(); cpuerr != nil {
+	if cpuerr := cpulimitcmd.Run(); cpuerr != nil {
 		fmt.Println(cpuerr.Error())
 	}
 	if cpulimitcmd.Process != nil && cpulimitcmd.Process.Pid != 0 {
