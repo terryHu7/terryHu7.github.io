@@ -1,4 +1,4 @@
-package novd1n1
+package main
 
 import (
 	"fmt"
