@@ -1,6 +1,7 @@
 package main
 
 import (
+	"context"
 	"fmt"
 	"os"
 	"os/signal"
@@ -12,38 +13,31 @@ func main() {
 	fmt.Println("main start")
 
 	defer func() {
-		fmt.Println("bye main from defer")
 		quit()
 	}()
+	ctx, cancel := context.WithCancel(context.Background())
 
-	sig := make(chan os.Signal)
+	sig := make(chan os.Signal, 1)
 	signal.Notify(sig, syscall.SIGINT, syscall.SIGQUIT, syscall.SIGTERM, syscall.SIGHUP)
 	go func() {
-		for s := range sig {
-			switch s {
-			case syscall.SIGINT, syscall.SIGQUIT, syscall.SIGTERM, syscall.SIGHUP:
-				quit()
-				if i, ok := s.(syscall.Signal); ok {
-					os.Exit(int(i))
-				} else {
-					os.Exit(0)
-				}
-			}
-		}
+		s := <-sig
+		cancel()
+		fmt.Printf("receive signal: [%v]\n", s)
+		time.Sleep(time.Second)
+		os.Exit(88)
 	}()
 
-	wait := make(chan bool)
-	go func() {
-		for {
-			time.Sleep(5000 * time.Millisecond)
-			close(wait)
-		}
-	}()
-	<-wait
+	go func(ctx context.Context) {
+		<-ctx.Done()
+		fmt.Println("<-ctx.Done, no need to carry on")
+	}(ctx)
+
+	<-time.After(10 * time.Second)
+	fmt.Println("10s time out")
 
 	fmt.Println("main end")
 }
 
 func quit() {
-	fmt.Println("\n成功退出")
+	fmt.Println("\n退出")
 }
