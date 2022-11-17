@@ -44,9 +44,9 @@ func getDurationV2(path string) (int, error) {
 
 func getDuration(path string) (int, error) {
 	durationStr, _ := RunCmd(fmt.Sprintf("ffprobe -i %s -show_entries format=duration -v quiet -of default=noprint_wrappers=1:nokey=1", path))
-	// fmt.Printf("Duration String of file: %s, duration: %s", path, durationStr)
-	pass++
-	fmt.Println(pass)
+	fmt.Printf("Duration String of file: %s, duration: %s", path, durationStr)
+	// pass++
+	// fmt.Println(pass)
 	duration := strings.Split(durationStr, ".")[0]
 	value, _ := strconv.ParseInt(duration, 10, 64)
 	return int(value), nil
@@ -305,15 +305,15 @@ func RunCmd(cmd string) (string, error) {
 	var b3 bytes.Buffer
 
 	io.Copy(&b3, &child.buf.b)
-	// go io.Copy(&b3, child.buf.f)
-	// go io.Copy(child.buf.f, os.Stdin)
-	// WaitTimeout(child.Cmd, 10000*time.Second)
-	// s := b3.String()
-	// if s == "" {
-	// 	panic("something wrong")
-	// }
-	return "tmp", nil
-	// return s, nil
+	go io.Copy(&b3, child.buf.f)
+	go io.Copy(child.buf.f, os.Stdin)
+	WaitTimeout(child.Cmd, 10000*time.Second)
+	s := b3.String()
+	if s == "" {
+		panic("something wrong")
+	}
+	// return "tmp", nil
+	return s, nil
 }
 
 const KillGrace = 5 * time.Second
