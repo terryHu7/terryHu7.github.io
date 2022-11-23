@@ -9,7 +9,6 @@ import (
 )
 
 func main() {
-	fmt.Println("�˿���(www.haicoder.net)")
 	conn, err := net.Dial("tcp", "localhost:728")
 	if err != nil {
 		fmt.Printf("connect failed, err : %v\n", err.Error())
@@ -27,12 +26,10 @@ func main() {
 		if trimmedInput == "Q" {
 			break
 		}
-		//��������
 		if _, err = conn.Write([]byte(trimmedInput)); err != nil {
 			fmt.Printf("write failed , err : %v\n", err)
 			break
 		}
-		//��������
 		var recvData = make([]byte, 1024)
 		if _, err = conn.Read(recvData); err != nil {
 			fmt.Printf("Read failed , err : %v\n", err)
