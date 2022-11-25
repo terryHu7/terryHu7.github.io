@@ -7,7 +7,7 @@
 <a href="https://space.bilibili.com/14089380"><img src="https://img.shields.io/badge/B站-@labuladong-000000.svg?style=flat-square&logo=Bilibili"></a>
 </p>
 
-![](https://labuladong.github.io/algo/images/souyisou1.png)
+<img src="https://labuladong.github.io/algo/images/souyisou1.png" width="400">
 
 **通知：[数据结构精品课](https://aep.h5.xeknow.com/s/1XJHEO) 已更新到 V1.9，[第 11 期刷题打卡挑战（9/19 开始）](https://mp.weixin.qq.com/s/eUG2OOzY3k_ZTz-CFvtv5Q) 开始报名。另外，建议你在我的 [网站](https://labuladong.github.io/algo/) 学习文章，体验更好。**
 
@@ -23,7 +23,7 @@
 
 给你一个可装载重量为 `W` 的背包和 `N` 个物品，每个物品有重量和价值两个属性。其中第 `i` 个物品的重量为 `wt[i]`，价值为 `val[i]`，现在让你用这个背包装物品，最多能装的价值是多少？
 
-![](https://labuladong.github.io/algo/images/knapsack/1.png)
+<img src="https://labuladong.github.io/algo/images/knapsack/1.png" width="400">
 
 举个简单的例子，输入如下：
 
@@ -173,4 +173,4 @@ int knapsack(int W, int N, int[] wt, int[] val) {
 
 **《labuladong 的算法小抄》已经出版，关注公众号查看详情；后台回复关键词「进群」可加入算法群；回复「PDF」可获取精华文章 PDF**：
 
-![](https://labuladong.github.io/algo/images/souyisou2.png)
+<img src="https://labuladong.github.io/algo/images/souyisou2.png" width="400">
