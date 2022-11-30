@@ -64,8 +64,8 @@ func uniquePathsII(obstacleGrid [][]int) int {
 	}
 
 	// if obstacleGrid[i][j]==1, correspondingly, dp[i][j] remains unchanged at 0
-	for i := 0; i < m; i++ {
-		for j := 0; j < n; j++ {
+	for i := 1; i < m; i++ {
+		for j := 1; j < n; j++ {
 			if obstacleGrid[i][j] != 1 {
 				dp[i][j] = dp[i][j-1] + dp[i-1][j]
 			}
