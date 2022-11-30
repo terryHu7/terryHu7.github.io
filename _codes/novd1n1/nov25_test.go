@@ -33,7 +33,7 @@ func uniquePaths(m, n int) int {
 	return -1
 }
 
-func uniquePathsII(obstacleGrid [][]int) int { //?
+func uniquePathsII(obstacleGrid [][]int) int {
 	//dp[i][j], (i, j) is the coordinate, dp[i][j] is the total number of paths
 	//At the beginning, we tried to use obstacleGrid as the dp table, but it'll be a mess
 
@@ -43,16 +43,26 @@ func uniquePathsII(obstacleGrid [][]int) int { //?
 	for index := range dp {
 		dp[index] = make([]int, n)
 	}
+	okrow, okcolumn := true, true
 	for i := 0; i < m; i++ {
 		for j := 0; j < n; j++ {
-			if i == 0 || j == 0 {
-				if obstacleGrid[i][j] != 1 {
-					dp[i][j] = 1
+			if obstacleGrid[0][j] != 1 {
+				if okcolumn {
+					dp[0][j] = 1
 				}
+			} else {
+				okcolumn = false
 			}
-
+			if obstacleGrid[i][0] != 1 {
+				if okrow {
+					dp[i][0] = 1
+				}
+			} else {
+				okrow = false
+			}
 		}
 	}
+
 	// if obstacleGrid[i][j]==1, correspondingly, dp[i][j] remains unchanged at 0
 	for i := 0; i < m; i++ {
 		for j := 0; j < n; j++ {
@@ -64,6 +74,7 @@ func uniquePathsII(obstacleGrid [][]int) int { //?
 	return dp[m-1][n-1]
 }
 
+/*
 func uniquePathsIIV2(obstacleGrid [][]int) int {
 	//obstacleGrid[i][j], (i, j) is the coordinate, obstacleGrid[i][j] is the total number of paths
 	for i := 0; i < len(obstacleGrid); i++ {
@@ -89,3 +100,4 @@ func uniquePathsIIV2(obstacleGrid [][]int) int {
 	}
 	return obstacleGrid[len(obstacleGrid)-1][len(obstacleGrid[0])-1]
 }
+*/
