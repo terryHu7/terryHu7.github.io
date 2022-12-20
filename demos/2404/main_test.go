@@ -1,7 +1,7 @@
 package main
 
 import (
-	"empire/gie"
+	"2404/gie"
 	"testing"
 )
 
