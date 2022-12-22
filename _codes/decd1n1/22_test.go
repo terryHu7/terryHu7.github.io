@@ -6,7 +6,7 @@ import (
 )
 
 func Test22(t *testing.T) {
-	fmt.Println(maxSubArray([]int{5, 4, -1, 7, 8}))
+	fmt.Println(maxSubArray([]int{-2, 1, -3, 4, -1, 2, 1, -5, 4}))
 }
 
 func findLengthOfLCIS(nums []int) int {
@@ -36,11 +36,23 @@ func maxSubArray(nums []int) int {
 	}
 	dp := make([]int, len(nums))
 	dp[0] = nums[0]
-
-	for i := 1; i < len(nums); i++ {
-		dp[i] = max(dp[i-1]+nums[i], nums[i]) //?
-	}
-
 	res := nums[0]
+	for i := 1; i < len(nums); i++ {
+		dp[i] = max(dp[i-1]+nums[i], nums[i])
+		if dp[i] > res {
+			res = dp[i]
+		}
+	}
+	fmt.Println(dp)
 	return res
 }
+
+// func max3(elements ...int) int {
+// 	res := elements[0]
+// 	for _, e := range elements {
+// 		if e > res {
+// 			res = e
+// 		}
+// 	}
+// 	return res
+// }
