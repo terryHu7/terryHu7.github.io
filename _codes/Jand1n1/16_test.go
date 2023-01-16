@@ -48,3 +48,40 @@ func generateMatrix(n int) [][]int {
 	}
 	return matrix
 }
+
+func spiralOrder(matrix [][]int) []int {
+	m, n := len(matrix), len(matrix[0])
+	left, right := 0, n-1
+	top, bottom := 0, m-1
+
+	num, target := 1, m*n
+
+	res := []int{}
+	for num <= target {
+		if num == target && m == n && n%2 == 1 {
+			res = append(res, matrix[top][left])
+			break
+		}
+		for i := left; i < right && num <= target; i++ {
+			res = append(res, matrix[top][i])
+			num++
+		}
+		for i := top; i < bottom && num <= target; i++ {
+			res = append(res, matrix[i][right])
+			num++
+		}
+		for i := right; i > left && num <= target; i-- {
+			res = append(res, matrix[bottom][i])
+			num++
+		}
+		for i := bottom; i > top && num <= target; i-- {
+			res = append(res, matrix[i][left])
+			num++
+		}
+		left++
+		right--
+		top++
+		bottom--
+	}
+	return res
+}
