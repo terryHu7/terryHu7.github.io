@@ -85,3 +85,22 @@ func spiralOrder(matrix [][]int) []int {
 	}
 	return res
 }
+
+type ListNode struct {
+	Val  int
+	Next *ListNode
+}
+
+func removeElements(head *ListNode, val int) *ListNode {
+	dummy := &ListNode{}
+	dummy.Next = head
+
+	cur := dummy
+	for cur != nil {
+		if cur.Next != nil && cur.Next.Val == val {
+			cur.Next = cur.Next.Next
+		}
+		cur = cur.Next
+	}
+	return dummy.Next
+}
