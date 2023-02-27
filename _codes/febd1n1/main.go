@@ -38,7 +38,7 @@ func (h *MyHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 
 	h.flowControl.CommitJob(job)
 	fmt.Println("commit job to job queue success")
-	job.WaitDone()
+	// job.WaitDone()
 }
 
 type FlowControl struct {
