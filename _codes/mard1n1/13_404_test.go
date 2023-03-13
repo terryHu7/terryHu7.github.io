@@ -28,9 +28,10 @@ func traverse404(node *TreeNode) {
 var maxDeep int // 全局变量 深度
 var value int   //全局变量 最终值
 func findBottomLeftValue(root *TreeNode) int {
-	if root.Left == nil && root.Right == nil { //需要提前判断一下（不要这个if的话提交结果会出错，但执行代码不会。防止这种情况出现，故先判断是否只有一个节点）
-		return root.Val
-	}
+	// if root.Left == nil && root.Right == nil { //需要提前判断一下（不要这个if的话提交结果会出错，但执行代码不会。
+	// 	//防止这种情况出现，故先判断是否只有一个节点）
+	// 	return root.Val
+	// }
 	findLeftValue(root, maxDeep)
 	return value
 }
