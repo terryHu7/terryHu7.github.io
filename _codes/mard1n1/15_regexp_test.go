@@ -5,6 +5,7 @@ import (
 	"io/ioutil"
 	"path/filepath"
 	"regexp"
+	"strconv"
 	"strings"
 	"testing"
 )
@@ -12,9 +13,12 @@ import (
 var CommonPath = "/home/hutianyu/"
 
 func TestRegexp(t *testing.T) {
-	matched, _ := regexp.MatchString("tmp_\\d{4}-\\d{2}-\\d{2}-\\d{2}-\\d{2}-\\d{2}_\\d+.mp4", "tmp_2023-00-00-00-00-00_01.mp4")
-	fmt.Println(matched)
-	// reg()
+	re := regexp.MustCompile(`_%(0\d)?d`)
+
+	str := "test_%02d_%d"
+	s := re.FindStringSubmatch(str)
+	fmt.Println(s)
+	fmt.Println(strconv.Atoi(s[len(s)-1]))
 }
 
 func reg() {
