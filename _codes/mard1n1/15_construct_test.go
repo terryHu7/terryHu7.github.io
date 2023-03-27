@@ -64,3 +64,20 @@ func findIndex(inorder []int, postorder []int) int {
 	}
 	return -1
 }
+
+//BST
+func sortedArrayToBST(nums []int) *TreeNode {
+	if len(nums) == 0 {
+		return nil
+	}
+	rootIndex := findRootIndex(nums)
+	return &TreeNode{
+		Val:   nums[rootIndex],
+		Left:  sortedArrayToBST(nums[:rootIndex]),
+		Right: sortedArrayToBST(nums[rootIndex+1:]),
+	}
+}
+
+func findRootIndex(nums []int) int {
+	return int(len(nums) / 2)
+}

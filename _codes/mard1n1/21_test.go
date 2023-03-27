@@ -25,7 +25,6 @@ func TestXxx(t *testing.T) {
 
 }
 
-/*
 func lowestCommonAncestor(root, p, q *TreeNode) *TreeNode {
 	return pTraversal(root, p, q)
 }
@@ -49,4 +48,3 @@ func pTraversal(node, p, q *TreeNode) *TreeNode {
 	}
 	return nil
 }
-*/
