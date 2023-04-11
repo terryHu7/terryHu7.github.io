@@ -7,7 +7,17 @@ import (
 )
 
 func TestWiggle(t *testing.T) {
-	fmt.Println(candy([]int{1, 2, 3, 3, 3, 2, 1}))
+	example := make([]int, 5)
+	example[0] = 1
+	example[1] = 2
+	example[2] = 3
+	example[3] = 4
+	example[4] = 5
+	fmt.Println(example)
+	copy(example[1:], example[0:])
+	fmt.Println(example)
+
+	// fmt.Println(candy([]int{1, 2, 3, 3, 3, 2, 1}))
 }
 
 func wiggleMaxLength(nums []int) int {
@@ -71,17 +81,16 @@ func prepend(slice []int, element int) []int {
 
 //?
 func candy(ratings []int) int {
-	candies := []int{}
-	for i := 0; i < len(ratings); i++ {
-		candies = append(candies, 1)
+	candies := make([]int, len(ratings))
+	for i := 0; i < len(candies); i++ {
+		candies[i] = 1
 	}
 
 	for i := 0; i < len(ratings)-1; i++ {
 		if ratings[i+1] > ratings[i] {
-			candies[i+1]++
+			candies[i+1] = candies[i] + 1
 		}
 	}
-	fmt.Println(candies)
 	for i := len(ratings) - 1; i > 0; i-- {
 		if ratings[i-1] > ratings[i] {
 			if candies[i-1] < candies[i]+1 {
@@ -94,24 +103,29 @@ func candy(ratings []int) int {
 	for _, c := range candies {
 		sum += c
 	}
-	fmt.Println(candies)
+	// fmt.Println(candies)
 	return sum
 }
 
 func reconstructQueue(people [][]int) [][]int {
-	//先将身高从大到小排序，确定最大个子的相对位置
 	sort.Slice(people, func(i, j int) bool {
-		if people[i][0] == people[j][0] {
-			return people[i][1] < people[j][1] //这个才是当身高相同时，将K按照从小到大排序
+		if people[j][0] == people[i][0] { // j is the former element
+			return people[j][1] > people[i][1]
 		}
-		return people[i][0] > people[j][0] //这个只是确保身高按照由大到小的顺序来排，并不确定K是按照从小到大排序的
+		return people[j][0] < people[i][0] // "true" means "yes, switch"
 	})
-	//再按照K进行插入排序，优先插入K小的
+
 	result := make([][]int, 0)
-	for _, info := range people {
-		result = append(result, info)
-		copy(result[info[1]+1:], result[info[1]:]) //将插入位置之后的元素后移动一位（意思是腾出空间）
-		result[info[1]] = info                     //将插入元素位置插入元素
+
+	//For example:
+	//[7,0],[6,1],[7,1]
+
+	//insert:[5,0]
+	for _, p := range people {
+		result = append(result, p)           //[7,0],[6,1],[7,1],[5,0]
+		copy(result[p[1]+1:], result[p[1]:]) //[7,0],[7,0],[6,1],[7,1]
+		result[p[1]] = p                     //[5,0],[7,0],[6,1],[7,1]
 	}
+
 	return result
 }
