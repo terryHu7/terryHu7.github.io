@@ -40,7 +40,7 @@ func nosync(fileName, content string) {
 }*/
 
 func main() {
-	n := "./test0414_words.txt"
+	n := "~/iotoptrace.txt"
 	ioutil.ReadFile(n)
 
 	vmcmd := exec.Command("bash", "-c", fmt.Sprintf("vmtouch -e %s", n))
