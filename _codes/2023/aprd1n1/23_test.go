@@ -19,15 +19,15 @@ func TestSudoku(t *testing.T) {
 	}
 	solveSudoku(board)
 
-	// tmap := map[int]int{}
-	// tmap[1] = 1
-	// tmap[2] = 2
-	// for _, t := range tmap {
-	// 	fmt.Println(t)
-	// 	if t == 2 {
-	// 		tmap[3] = 3
-	// 	}
-	// }
+	tmap := map[int]int{}
+	tmap[1] = 1
+	tmap[2] = 2
+	for _, t := range tmap {
+		fmt.Println(t)
+		if t == 2 {
+			tmap[3] = 3
+		}
+	}
 
 }
 
