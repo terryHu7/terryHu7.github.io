@@ -1,20 +1,17 @@
 package main
 
 import (
-	"bytes"
-	"fmt"
 	"io/ioutil"
 	"os"
-	"os/exec"
 )
 
-/*
 func main() {
 	fileName := "./test.txt"
 
 	content2 := `
-
+	111	
 	`
+
 	nosync(fileName, content2)
 }
 
@@ -36,26 +33,19 @@ func nosync(fileName, content string) {
 		return
 	}
 
-	// file.Sync()
-}*/
-
-func main() {
-	n := "~/iotoptrace.txt"
-	ioutil.ReadFile(n)
-
-	vmcmd := exec.Command("bash", "-c", fmt.Sprintf("vmtouch -e %s", n))
-	var out bytes.Buffer
-	vmcmd.Stdout = &out
-	if vmerr := vmcmd.Run(); vmerr != nil {
-		fmt.Printf("vmtouch::fail to free the cache of %s, err:%v", n, vmerr)
-	} else {
-		fmt.Printf("vmtouch::%s", out.String())
-	}
+	file.Sync()
 }
 
-func writeFile(fileName, content string) {
-	err := ioutil.WriteFile(fileName, []byte(content), os.ModePerm)
-	if err != nil {
-		return
-	}
-}
+// func main() {
+// 	n := "~/iotoptrace.txt"
+// 	ioutil.ReadFile(n)
+
+// 	vmcmd := exec.Command("bash", "-c", fmt.Sprintf("vmtouch -e %s", n))
+// 	var out bytes.Buffer
+// 	vmcmd.Stdout = &out
+// 	if vmerr := vmcmd.Run(); vmerr != nil {
+// 		fmt.Printf("vmtouch::fail to free the cache of %s, err:%v", n, vmerr)
+// 	} else {
+// 		fmt.Printf("vmtouch::%s", out.String())
+// 	}
+// }
