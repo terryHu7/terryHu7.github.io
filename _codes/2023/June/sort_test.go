@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"testing"
 )
 
@@ -19,20 +20,19 @@ func insertionSort(arr []int) {
 	n := len(arr)
 	for i := 1; i < n; i++ {
 		key := arr[i]
-		j := i - 1
-		for j >= 0 && arr[j] > key {
+		var j int
+		for j = i - 1; j >= 0 && arr[j] > key; j-- {
 			arr[j+1] = arr[j]
-			j--
 		}
 		arr[j+1] = key
 	}
 }
 
-func selectionSort(arr []int) {
+func selectionSort2(arr []int) {
 	n := len(arr)
 	for i := 0; i < n-1; i++ {
 		minIdx := i
-		for j := i + 1; j < n; j++ {
+		for j := i; j < n; j++ { //j=i+1
 			if arr[j] < arr[minIdx] {
 				minIdx = j
 			}
@@ -41,7 +41,20 @@ func selectionSort(arr []int) {
 	}
 }
 
-func quickSort(arr []int) {
+func selectionSort(arr []int) {
+	n := len(arr)
+	for i := n - 1; i >= 0; i-- {
+		maxIdx := i
+		for j := 0; j <= i; j++ {
+			if arr[j] > arr[maxIdx] {
+				maxIdx = j
+			}
+		}
+		arr[i], arr[maxIdx] = arr[maxIdx], arr[i]
+	}
+}
+
+func quickSort2(arr []int) {
 	if len(arr) <= 1 {
 		return
 	}
@@ -61,8 +74,58 @@ func quickSort(arr []int) {
 		}
 	}
 	arr[0], arr[j] = arr[j], arr[0]
-	quickSort(arr[:j])
-	quickSort(arr[j+1:])
+	quickSort2(arr[:j])
+	quickSort2(arr[j+1:])
+}
+
+func quickSort3(arr []int) {
+	if len(arr) <= 1 {
+		return
+	}
+
+	pivot := arr[0]
+	left, right := 0, len(arr)-1
+
+	for left < right {
+		for arr[left] <= pivot && left < right {
+			left++
+		}
+
+		for arr[right] >= pivot && left < right {
+			right--
+		}
+
+		arr[left], arr[right] = arr[right], arr[left]
+	}
+
+	arr[0], arr[left] = arr[left], arr[0]
+
+	quickSort3(arr[:left])
+	quickSort3(arr[left+1:])
+}
+
+func quickSort(arr []int) []int {
+	if len(arr) <= 1 {
+		return arr
+	}
+
+	left, pivot, right := partition(arr)
+
+	res := append(append(quickSort(left), pivot), quickSort(right)...)
+	return res
+}
+
+func partition(arr []int) (left []int, pivot int, right []int) {
+	pivot = arr[0]
+
+	for i := 1; i < len(arr); i++ {
+		if arr[i] < pivot {
+			left = append(left, arr[i])
+		} else {
+			right = append(right, arr[i])
+		}
+	}
+	return left, pivot, right
 }
 
 func mergeSort(arr []int) []int {
@@ -93,15 +156,22 @@ func merge(left, right []int) []int {
 }
 
 func TestSort(t *testing.T) {
-	arr := []int{5, 2, 9, 1, 3}
+	arr := []int{4, 1, 2, 3, 5, 7, 6, 10}
 
-	bubbleSort(arr)
+	quickSort3(arr)
+	fmt.Println(arr)
+	// bubbleSort(arr)
 
-	insertionSort(arr)
+	// insertionSort(arr)
 
-	selectionSort(arr)
+	// quickSort(arr)
 
-	quickSort(arr)
+	// mergeSort(arr)
+}
 
-	mergeSort(arr)
+func TestTmp(t *testing.T) {
+	arr := []int{0, 1, 2}
+	tmp := []int{}
+	tmp = append(tmp, arr[:0]...)
+	fmt.Println(tmp)
 }
