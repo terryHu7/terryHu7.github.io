@@ -1,5 +1,0 @@
-method:PUT
-getFileNameFromURL, len:3 slice=[ upload filetest.txt]
-getHandle URL:/upload/filetest.txt, filename:filetest.txt
-getFileNameFromURL, len:2 slice=[ filetest.txt]
-getHandle URL:/filetest.txt, filename:filetest.txt
