@@ -4,7 +4,7 @@ title:  "Let's test spoilers"
 author: sal
 categories: [ Jekyll, tutorial ]
 image: assets/images/12.jpg
-featured: false
+featured: true
 hidden: true
 ---
 
