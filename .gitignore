@@ -5,3 +5,5 @@ _site
 *~
 /.idea/git_toolbox_prj.xml
 /.idea/workspace.xml
+/.idea/
+.DS_Store
