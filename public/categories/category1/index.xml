@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Home</title>
-    <link>http://localhost:1313/</link>
-    <description>Recent content on Home</description>
+    <title>Category1 on Home</title>
+    <link>http://localhost:1313/categories/category1/</link>
+    <description>Recent content in Category1 on Home</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 30 Aug 2025 15:48:31 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/categories/category1/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>My First Post</title>
       <link>http://localhost:1313/posts/my-first-post/</link>

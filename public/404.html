@@ -3,14 +3,14 @@
   x-data
   :class="$store.darkMode.class()"
   :data-theme="$store.darkMode.theme()">
-  <head>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>404 Not Found | My New Hugo Site</title>
+    <title>404 Not Found | Home</title>
 
     
 
-<link rel="canonical" href="https://terryHu7.github.io/404.html" />
+<link rel="canonical" href="http://localhost:1313/404.html" />
 
 
 
@@ -22,8 +22,8 @@
 <meta name="generator" content="Hugo 0.147.4">
 
 
-<meta property="og:url" content="https://terryHu7.github.io/404.html">
-  <meta property="og:site_name" content="My New Hugo Site">
+<meta property="og:url" content="http://localhost:1313/404.html">
+  <meta property="og:site_name" content="Home">
   <meta property="og:title" content="404 Page not found">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="website">
@@ -37,9 +37,7 @@
 
 
 
-  
-
-<link rel="stylesheet" href="/css/output.min.css" />
+<link rel="stylesheet" href="/css/output.css" />
 
 
 
@@ -106,23 +104,32 @@
 
 
 
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/posts" title="Archives">
+    <ion-icon name="archive"></ion-icon>
+    Archives
+  </a>
+</li>
 
 
 
 
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/categories" title="All Categories">
+    <ion-icon name="grid"></ion-icon>
+    All Categories
+  </a>
+</li>
 
 
 
 
-
-
-
-
-
-
-
-
-
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/tags" title="All Tags">
+    <ion-icon name="pricetags"></ion-icon>
+    All Tags
+  </a>
+</li>
 
 
 
@@ -157,23 +164,23 @@
 
       
       
-
-
-
-
-
-      
-      
-
-
-
+<a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/posts" title="Archives">
+  <ion-icon class="group-hover:text-primary-content" name="archive"></ion-icon>
+</a>
 
 
       
       
+<a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/categories" title="All Categories">
+  <ion-icon class="group-hover:text-primary-content" name="grid"></ion-icon>
+</a>
 
 
-
+      
+      
+<a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/tags" title="All Tags">
+  <ion-icon class="group-hover:text-primary-content" name="pricetags"></ion-icon>
+</a>
 
 
       
@@ -194,7 +201,7 @@
 <div class="h-[60vh] mx-auto px-4 flex flex-col justify-center items-center prose dark:prose-invert">
   <h1>Oops...You are lost in dream.</h1>
   <p>Don't worry though, click the button below to wake up.</p>
-  <button class="btn my-5" @click="window.location.href = 'https://terryHu7.github.io/'">Back to home</button>
+  <button class="btn my-5" @click="window.location.href = 'http://localhost:1313/'">Back to home</button>
 </div>
 
 
@@ -203,7 +210,7 @@
 
   <div>
   
-  <p>© 2025 My New Hugo Site</p>
+  <p>© 2025 Home</p>
   
 
   
@@ -266,7 +273,7 @@
 
   <div>
   
-  <p>© 2025 My New Hugo Site</p>
+  <p>© 2025 Home</p>
   
 
   
@@ -325,16 +332,12 @@
 
   
   
-    
-  
-  <script src="/js/grid.min.js"></script>
+  <script src="/js/grid.js"></script>
 
 
 
 
-  
-
-<script src="/js/main.min.js"></script>
+<script src="/js/main.js"></script>
 
      
 
