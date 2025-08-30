@@ -10,9 +10,6 @@ shortname = "tianyu_hu"
 ID = "12095195484"
 
 [params]
-lightTheme = "emerald"
-darkTheme = "forest"
-
 backgroundImage = "assets/img/bridge.jpg"
 backgroundImageDark = "assets/img/bridge.jpg"
 
