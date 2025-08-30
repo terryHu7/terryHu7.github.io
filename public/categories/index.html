@@ -3,17 +3,17 @@
   x-data
   :class="$store.darkMode.class()"
   :data-theme="$store.darkMode.theme()">
-  <head>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>
 
 
-All Categories | My New Hugo Site</title>
+All Categories | Home</title>
 
     
 
-<link rel="canonical" href="https://terryHu7.github.io/categories/" />
+<link rel="canonical" href="http://localhost:1313/categories/" />
 
 
 
@@ -25,8 +25,8 @@ All Categories | My New Hugo Site</title>
 <meta name="generator" content="Hugo 0.147.4">
 
 
-<meta property="og:url" content="https://terryHu7.github.io/categories/">
-  <meta property="og:site_name" content="My New Hugo Site">
+<meta property="og:url" content="http://localhost:1313/categories/">
+  <meta property="og:site_name" content="Home">
   <meta property="og:title" content="Categories">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="website">
@@ -40,9 +40,7 @@ All Categories | My New Hugo Site</title>
 
 
 
-  
-
-<link rel="stylesheet" href="/css/output.min.css" />
+<link rel="stylesheet" href="/css/output.css" />
 
 
 
@@ -109,23 +107,32 @@ All Categories | My New Hugo Site</title>
 
 
 
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/posts" title="Archives">
+    <ion-icon name="archive"></ion-icon>
+    Archives
+  </a>
+</li>
 
 
 
 
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/categories" title="All Categories">
+    <ion-icon name="grid"></ion-icon>
+    All Categories
+  </a>
+</li>
 
 
 
 
-
-
-
-
-
-
-
-
-
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/tags" title="All Tags">
+    <ion-icon name="pricetags"></ion-icon>
+    All Tags
+  </a>
+</li>
 
 
 
@@ -160,23 +167,23 @@ All Categories | My New Hugo Site</title>
 
       
       
-
-
-
-
-
-      
-      
-
-
-
+<a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/posts" title="Archives">
+  <ion-icon class="group-hover:text-primary-content" name="archive"></ion-icon>
+</a>
 
 
       
       
+<a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/categories" title="All Categories">
+  <ion-icon class="group-hover:text-primary-content" name="grid"></ion-icon>
+</a>
 
 
-
+      
+      
+<a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/tags" title="All Tags">
+  <ion-icon class="group-hover:text-primary-content" name="pricetags"></ion-icon>
+</a>
 
 
       
@@ -200,8 +207,12 @@ All Categories | My New Hugo Site</title>
 
   <div class="md:basis-[200px] lg:basis-[300px] p-4 prose dark:prose-invert">
     <h1 class="text-2xl">All Categories</h1>
-    <p class="text-sm">0 categories</p>
+    <p class="text-sm">1 category</p>
     <div class="flex flex-wrap gap-4 mt-6">
+      
+      <a href="/categories/category1/" class="badge h-6 no-underline hover:badge-primary">
+        Category1
+      </a>
       
     </div>
   </div>
@@ -213,6 +224,56 @@ All Categories | My New Hugo Site</title>
 
     
     <div class="dream-grid">
+      
+        <div class="w-full md:w-1/2 lg:w-1/3 p-4 dream-column">
+          <a class="card bg-base-100 hover:bg-base-content/10 shadow-xl cursor-pointer dark:border dark:border-base-content/30" href="/posts/my-first-post/">
+  
+  <figure>
+    
+    <img src="/img/cover.jpg" alt="My First Post" />
+    
+  </figure>
+  
+
+  <div class="card-body">
+    <h2 class="card-title">My First Post</h2>
+
+    <p class="date text-base-content/60">
+    
+      Saturday, Aug 30, 2025
+    
+    </p>
+
+    <p>Cut out summary from your post content here.</p>
+
+    
+    <div class="card-actions justify-between items-center mt-4">
+      
+        <div class="flex items-center">
+  
+  <span>@</span>
+  
+
+  <span itemprop="author" itemscope itemtype="https://schema.org/Person">
+  
+    
+      <span itemprop="name">Author Name</span>
+    
+  
+  </span>
+</div>
+
+      
+
+      <div class="flex items-center">
+        <ion-icon name="time" class="mr-1"></ion-icon>
+        <span>1 minute read</span>
+      </div>
+    </div>
+  </div>
+</a>
+
+        </div>
       
     </div>
     
@@ -228,7 +289,7 @@ All Categories | My New Hugo Site</title>
 
   <div>
   
-  <p>© 2025 My New Hugo Site</p>
+  <p>© 2025 Home</p>
   
 
   
@@ -291,7 +352,7 @@ All Categories | My New Hugo Site</title>
 
   <div>
   
-  <p>© 2025 My New Hugo Site</p>
+  <p>© 2025 Home</p>
   
 
   
@@ -350,16 +411,12 @@ All Categories | My New Hugo Site</title>
 
   
   
-    
-  
-  <script src="/js/grid.min.js"></script>
+  <script src="/js/grid.js"></script>
 
 
 
 
-  
-
-<script src="/js/main.min.js"></script>
+<script src="/js/main.js"></script>
 
     
 
