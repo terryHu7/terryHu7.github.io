@@ -2,3 +2,62 @@ baseURL = 'https://terryHu7.github.io'
 languageCode = 'en-us'
 title = 'Home'
 theme = 'dream'
+
+[services]
+[services.disqus]
+shortname = "tianyu_hu"
+[services.googleAnalytics]
+ID = "12095195484"
+
+[params]
+lightTheme = "emerald"
+darkTheme = "forest"
+
+backgroundImage = "assets/img/bridge.jpg"
+backgroundImageDark = "assets/img/bridge.jpg"
+
+author = "Terry"
+# description = ""
+avatar = "assets/img/avatar.jpg"
+headerTitle = "HeaderTitle"
+# motto = ""
+footerBottomText = "xxx"
+
+rss = true
+
+# utterancesRepo = ""
+
+# valine = true
+# LEANCLOUD_APP_ID = ""
+# LEANCLOUD_APP_KEY = ""
+
+# waline = true
+# walineServer = ""
+
+email = "huty1998@outlook.com"
+
+siteStartYear = 2025
+
+favicon = "assets/img/tree.png"
+
+
+customSyntaxHighlighting = true
+
+
+# stickyNav = true
+reorderNavItems = ["about", "search", "rss", "posts", "categories", "tags"]
+collapseNavItems = ["posts", "categories", "tags"]
+# noDefaultSummaryCover = true
+showTableOfContents = true
+showSummaryCoverInPost = true
+imageZoomableInPost = true
+showPrevNextPost = true
+reorderShares = ["x", "facebook", "whatsapp"]
+
+# [params.advanced]
+# customCSS = ["css/custom.css"]
+# customJS = []
+
+[params.experimental]
+jsDate = true
+jsDateFormat = "yyyy年MM月dd日"
