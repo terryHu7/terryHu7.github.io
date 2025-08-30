@@ -1,8 +1,0 @@
-github.com/divan/gotrace v0.0.0-20160720144702-224c6918bf75 h1:yL1vy6q0pRjU9KS6tX4B22JqJVPf1Iu+LW4wPqiLKHk=
-github.com/divan/gotrace v0.0.0-20160720144702-224c6918bf75/go.mod h1:DQIkemiA4Hokvk4BUt4y/8IXo0sYDdD2btWZxOrH8qA=
-github.com/elazarl/go-bindata-assetfs v1.0.1 h1:m0kkaHRKEu7tUIUFVwhGGGYClXvyl4RE03qmvRTNfbw=
-github.com/elazarl/go-bindata-assetfs v1.0.1/go.mod h1:v+YaWX3bdea5J/mo8dSETolEo7R71Vk1u8bnjau5yw4=
-golang.org/x/sys v0.4.0 h1:Zr2JFtRQNX3BCZ8YtxRE9hNJYC8J6I1MVbMg6owUp18=
-golang.org/x/sys v0.4.0/go.mod h1:oPkhp1MJrh7nUepCBck5+mAzfO9JrbApNNgaTdGDITg=
-golang.org/x/tools v0.5.0 h1:+bSpV5HIeWkuvgaMfI3UmKRThoTA5ODJTUd8T17NO+4=
-golang.org/x/tools v0.5.0/go.mod h1:N+Kgy78s5I24c24dU8OfWNEotWjutIs8SnJvn5IDq+k=
