@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Home</title>
+    <title>Terry&#39;s Blog</title>
     <link>http://localhost:1313/</link>
-    <description>Recent content on Home</description>
+    <description>Recent content on Terry&#39;s Blog</description>
     <generator>Hugo</generator>
-    <language>en-us</language>
+    <language>zh-Hans</language>
     <lastBuildDate>Sat, 30 Aug 2025 15:48:31 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>First Post</title>
-      <link>http://localhost:1313/posts/my-first-post/</link>
+      <link>http://localhost:1313/posts/first/my-first-post/</link>
       <pubDate>Sat, 30 Aug 2025 15:48:31 +0800</pubDate>
-      <guid>http://localhost:1313/posts/my-first-post/</guid>
+      <guid>http://localhost:1313/posts/first/my-first-post/</guid>
       <description>&lt;p&gt;Cut out summary from your post content here.&lt;/p&gt;</description>
     </item>
   </channel>
