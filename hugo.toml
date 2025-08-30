@@ -8,3 +8,18 @@ theme = 'dream'
 shortname = "tianyu_hu"
 [services.googleAnalytics]
 ID = "12095195484"
+
+[params]
+lightTheme = "emerald"
+darkTheme = "forest"
+
+backgroundImage = "assets/img/bridge.jpg"
+backgroundImageDark = "assets/img/bridge.jpg"
+
+author = "Terry"
+avatar = "assets/img/avatar.jpg"
+headerTitle = "HeaderTitle"
+footerBottomText = "xxx"
+rss = true
+favicon = "assets/img/tree.png"
+customSyntaxHighlighting = true
