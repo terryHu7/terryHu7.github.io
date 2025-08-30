@@ -3,18 +3,12 @@ title: First Post
 date: 2025-08-30T15:48:31+08:00
 lastmod: 2025-08-30T15:48:31+08:00
 author: Terry
-# avatar: /img/author.jpg
-# authorlink: https://author.site
-cover: /img/cover.jpg
-# images:
-#   - /img/cover.jpg
+cover: assets/img/avatar.jpg
 categories:
   - category1
 tags:
   - tag1
   - tag2
-# nolastmod: true
-# math: true
 draft: false
 ---
 
