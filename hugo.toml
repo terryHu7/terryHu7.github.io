@@ -10,8 +10,8 @@ shortname = "tianyu_hu"
 ID = "12095195484"
 
 [params]
-backgroundImage = "assets/img/bridge.jpg"
-backgroundImageDark = "assets/img/bridge.jpg"
-favicon = "assets/img/tree.png"
-avatar = "assets/img/avatar.jpg"
+backgroundImage = "img/bridge.jpg"
+backgroundImageDark = "img/bridge.jpg"
+favicon = "img/tree.png"
+avatar = "img/avatar.jpg"
 rss = true
