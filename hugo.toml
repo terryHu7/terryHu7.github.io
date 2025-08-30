@@ -12,11 +12,6 @@ ID = "12095195484"
 [params]
 backgroundImage = "assets/img/bridge.jpg"
 backgroundImageDark = "assets/img/bridge.jpg"
-
-author = "Terry"
-avatar = "assets/img/avatar.jpg"
-headerTitle = "HeaderTitle"
-footerBottomText = "xxx"
-rss = true
 favicon = "assets/img/tree.png"
-customSyntaxHighlighting = true
+avatar = "assets/img/avatar.jpg"
+rss = true
