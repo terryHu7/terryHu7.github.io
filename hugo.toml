@@ -1,4 +1,3 @@
-baseURL = 'https://terryHu.github.io/'
+baseURL = 'https://terryHu7.github.io'
 languageCode = 'en-us'
 title = 'My New Hugo Site'
-theme = "dream"
