@@ -9,6 +9,10 @@
     <title>Posts | Home</title>
 
     
+  
+    <link href="/img/tree.png" rel="icon" type="image/x-icon" />
+  
+
 
 <link rel="canonical" href="https://terryHu7.github.io/posts/" />
 
@@ -45,6 +49,20 @@
 <link rel="stylesheet" href="/css/output.min.css" />
 
 
+<style>
+
+#dream-global-bg {
+  background-image: url(/img/bridge.jpg);
+}
+
+
+
+html.dark #dream-global-bg {
+  background-image: url(/img/bridge.jpg);
+}
+
+</style>
+
 
 
      
@@ -69,7 +87,7 @@
     <section class="flex items-center gap-4">
       <div class="avatar cursor-pointer hover:avatar-online" @click="flip = !flip" title="Flip it!">
         <div class="h-10 rounded-full">
-          <img src="/" alt="" />
+          <img src="/img/avatar.jpg" alt="" />
         </div>
       </div>
 
@@ -102,9 +120,12 @@
 
 
 
-
-
-
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/index.xml" title="RSS">
+    <ion-icon name="logo-rss"></ion-icon>
+    RSS
+  </a>
+</li>
 
 
 
@@ -162,9 +183,9 @@
 
       
       
-
-
-
+<a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/index.xml" title="RSS">
+  <ion-icon class="group-hover:text-primary-content" name="logo-rss"></ion-icon>
+</a>
 
 
       
@@ -228,7 +249,7 @@
           <ul>
             
             <li>
-              <a href="/posts/my-first-post/">My First Post</a>
+              <a href="/posts/my-first-post/">First Post</a>
             </li>
             
           </ul>
@@ -387,6 +408,22 @@
 
     
 
+    
+    
+      <script async src="https://www.googletagmanager.com/gtag/js?id=12095195484"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', '12095195484');
+        }
+      </script>
     
 
     <script type="module" src="https://cdn.jsdelivr.net/npm/ionicons@7.4.0/dist/ionicons/ionicons.esm.js" integrity="sha256-/IFmi82bIhdYWctu0UddSlJqpnzWm7Vh2C4CM32wF/k=" crossorigin="anonymous"></script>

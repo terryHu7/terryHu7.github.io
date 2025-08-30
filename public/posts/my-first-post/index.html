@@ -6,9 +6,13 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My First Post | Home</title>
+    <title>First Post | Home</title>
 
     
+  
+    <link href="/img/tree.png" rel="icon" type="image/x-icon" />
+  
+
 
 <link rel="canonical" href="https://terryHu7.github.io/posts/my-first-post/" />
 
@@ -28,7 +32,7 @@
 
 <meta property="og:url" content="https://terryHu7.github.io/posts/my-first-post/">
   <meta property="og:site_name" content="Home">
-  <meta property="og:title" content="My First Post">
+  <meta property="og:title" content="First Post">
   <meta property="og:description" content="Cut out summary from your post content here.">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
@@ -42,7 +46,7 @@
 
 
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="My First Post">
+  <meta name="twitter:title" content="First Post">
   <meta name="twitter:description" content="Cut out summary from your post content here.">
 
 
@@ -52,6 +56,20 @@
 
 <link rel="stylesheet" href="/css/output.min.css" />
 
+
+<style>
+
+#dream-global-bg {
+  background-image: url(/img/bridge.jpg);
+}
+
+
+
+html.dark #dream-global-bg {
+  background-image: url(/img/bridge.jpg);
+}
+
+</style>
 
 
 
@@ -93,7 +111,7 @@
     <section class="flex items-center gap-4">
       <div class="avatar cursor-pointer hover:avatar-online" @click="flip = !flip" title="Flip it!">
         <div class="h-10 rounded-full">
-          <img src="/" alt="" />
+          <img src="/img/avatar.jpg" alt="" />
         </div>
       </div>
 
@@ -126,9 +144,12 @@
 
 
 
-
-
-
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/index.xml" title="RSS">
+    <ion-icon name="logo-rss"></ion-icon>
+    RSS
+  </a>
+</li>
 
 
 
@@ -186,9 +207,9 @@
 
       
       
-
-
-
+<a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/index.xml" title="RSS">
+  <ion-icon class="group-hover:text-primary-content" name="logo-rss"></ion-icon>
+</a>
 
 
       
@@ -235,7 +256,7 @@
   <div class="lg:col-span-2">
     <article class="mx-auto prose prose-quoteless dark:prose-invert" id="dream-single-post-main" itemscope itemtype="http://schema.org/Article">
       
-  <meta itemprop="name" content="My First Post">
+  <meta itemprop="name" content="First Post">
   <meta itemprop="description" content="Cut out summary from your post content here.">
   <meta itemprop="datePublished" content="2025-08-30T15:48:31+08:00">
   <meta itemprop="dateModified" content="2025-08-30T15:48:31+08:00">
@@ -243,7 +264,7 @@
   <meta itemprop="keywords" content="Tag1,Tag2">
 
       <header>
-        <h1 itemprop="headline">My First Post</h1>
+        <h1 itemprop="headline">First Post</h1>
         <p class="text-sm">
           
             Saturday, Aug 30, 2025
@@ -288,7 +309,7 @@
   
   
     <a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary"
-      href="https://x.com/intent/post?text=My%20First%20Post&amp;url=https://terryHu7.github.io/posts/my-first-post/" target="_blank" rel="noopener noreferrer"
+      href="https://x.com/intent/post?text=First%20Post&amp;url=https://terryHu7.github.io/posts/my-first-post/" target="_blank" rel="noopener noreferrer"
       title="Share on X">
       <ion-icon class="group-hover:text-primary-content" name="logo-x"></ion-icon>
     </a>
@@ -300,7 +321,7 @@
     </a>
   
     <a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary"
-      href="https://wa.me/?text=My%20First%20Post%20https://terryHu7.github.io/posts/my-first-post/" target="_blank" rel="noopener noreferrer"
+      href="https://wa.me/?text=First%20Post%20https://terryHu7.github.io/posts/my-first-post/" target="_blank" rel="noopener noreferrer"
       title="Share on WhatsApp">
       <ion-icon class="group-hover:text-primary-content" name="logo-whatsapp"></ion-icon>
     </a>
@@ -324,6 +345,49 @@
 
       
 
+      
+      <div class="divider"></div>
+
+      <section class="space-y-4">
+        
+<article>
+  <div id="disqus_thread"></div>
+<script>
+    window.disqus_config = function () {
+        this.page.identifier = '\/posts\/my-first-post\/';
+        this.page.title = 'First Post';
+        this.page.url = 'https:\/\/terryHu7.github.io\/posts\/my-first-post\/';
+
+        
+    };
+    function initDisqus() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "tianyu_hu" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    };
+    setTimeout(() => {
+        initDisqus();
+    }, 3000);
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</article>
+
+
+
+
+
+
+
+
+
+
+      </section>
       
     </article>
   </div>
@@ -500,6 +564,22 @@
 
     
 
+    
+    
+      <script async src="https://www.googletagmanager.com/gtag/js?id=12095195484"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', '12095195484');
+        }
+      </script>
     
 
     <script type="module" src="https://cdn.jsdelivr.net/npm/ionicons@7.4.0/dist/ionicons/ionicons.esm.js" integrity="sha256-/IFmi82bIhdYWctu0UddSlJqpnzWm7Vh2C4CM32wF/k=" crossorigin="anonymous"></script>
