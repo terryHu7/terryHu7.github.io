@@ -3,7 +3,7 @@
   x-data
   :class="$store.darkMode.class()"
   :data-theme="$store.darkMode.theme()">
-  <head>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>首页 | Terry&#39;s Blog</title>
@@ -14,7 +14,7 @@
   
 
 
-<link rel="canonical" href="https://terryHu7.github.io/" />
+<link rel="canonical" href="http://localhost:1313/" />
 
 
 
@@ -26,7 +26,7 @@
 <meta name="generator" content="Hugo 0.147.4">
 
 
-<meta property="og:url" content="https://terryHu7.github.io/">
+<meta property="og:url" content="http://localhost:1313/">
   <meta property="og:site_name" content="Terry&#39;s Blog">
   <meta property="og:title" content="Terry&#39;s Blog">
   <meta property="og:locale" content="zh_Hans">
@@ -42,9 +42,7 @@
 
 
 
-  
-
-<link rel="stylesheet" href="/css/output.min.css" />
+<link rel="stylesheet" href="/css/output.css" />
 
 
 <style>
@@ -95,7 +93,7 @@ html.dark #dream-global-bg {
       
       <div>
         
-        <a href="https://terryHu7.github.io/" class="text-lg font-semibold cursor-pointer">
+        <a href="http://localhost:1313/" class="text-lg font-semibold cursor-pointer">
           Terry&#39;s Blog
         </a>
         
@@ -320,17 +318,23 @@ html.dark #dream-global-bg {
 <div class="dream-grid opacity-0">
   
     <div class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-4 dream-column">
-      <a class="card bg-base-100 hover:bg-base-content/10 shadow-xl cursor-pointer dark:border dark:border-base-content/30" href="/posts/first/my-first-post/">
+      <a class="card bg-base-100 hover:bg-base-content/10 shadow-xl cursor-pointer dark:border dark:border-base-content/30" href="/posts/first/">
   
   <figure>
     
-    <img src="xxx.jpg" alt="First Post" />
+    
+      
+      <picture>
+        <source srcset="/posts/first/first_hu_ae26c27cb636f1b8.webp" type="image/webp" />
+        <img src="/posts/first/first.jpg" alt="first.jpg" />
+      </picture>
+    
     
   </figure>
   
 
   <div class="card-body">
-    <h2 class="card-title">First Post</h2>
+    <h2 class="card-title">First</h2>
 
     <p class="date text-base-content/60">
     
@@ -451,7 +455,7 @@ html.dark #dream-global-bg {
     window.disqus_config = function () {
         this.page.identifier = '\/';
         this.page.title = 'Terry\u0027s Blog';
-        this.page.url = 'https:\/\/terryHu7.github.io\/';
+        this.page.url = 'http:\/\/localhost:1313\/';
 
         
         this.callbacks.onReady.push(function () {
@@ -549,16 +553,12 @@ html.dark #dream-global-bg {
 
   
   
-    
-  
-  <script src="/js/grid.min.js"></script>
+  <script src="/js/grid.js"></script>
 
 
 
 
-  
-
-<script src="/js/main.min.js"></script>
+<script src="/js/main.js"></script>
 
     
 
