@@ -15,3 +15,26 @@
 [data-theme="forest"] #disqus_thread a {
   color: #cbc9ca;
 }
+
+/* Light theme article style */
+[data-theme="emerald"] article {
+  background-color: rgba(255, 255, 255, 0.95);
+  color: #000000;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Dark theme article style */
+[data-theme="forest"] article {
+  background-color: rgba(30, 30, 30, 0.95);
+  color: #ffffff;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Ensure all text elements within the article inherit the color */
+article * {
+  color: inherit !important;
+}
