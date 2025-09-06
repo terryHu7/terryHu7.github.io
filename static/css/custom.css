@@ -1,0 +1,53 @@
+/* Custom styles for Dream theme v3 with daisyUI + TailwindCSS v4 */
+
+/* 为文章内容添加半透明背景，提高文字可读性 */
+#dream-single-post-main {
+  @apply bg-base-100/90 backdrop-blur-sm rounded-lg p-6 shadow-lg;
+}
+
+/* 确保文章内容区域有足够的对比度 */
+#dream-single-post-content {
+  @apply bg-base-100/95 rounded-lg p-4 mt-4;
+}
+
+/* 为文章标题添加背景 */
+#dream-single-post-main header {
+  @apply bg-base-100/80 rounded-lg p-4 mb-4;
+}
+
+/* 深色模式下的样式调整 */
+@media (prefers-color-scheme: dark) {
+  #dream-single-post-main {
+    @apply bg-base-100/85;
+  }
+  
+  #dream-single-post-content {
+    @apply bg-base-100/90;
+  }
+  
+  #dream-single-post-main header {
+    @apply bg-base-100/75;
+  }
+}
+
+/* 手动切换到深色模式时的样式 */
+html.dark #dream-single-post-main {
+  @apply bg-base-100/85;
+}
+
+html.dark #dream-single-post-content {
+  @apply bg-base-100/90;
+}
+
+html.dark #dream-single-post-main header {
+  @apply bg-base-100/75;
+}
+
+/* 确保文字在任何背景下都清晰可见 */
+#dream-single-post-main {
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+html.dark #dream-single-post-main {
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.1);
+}
