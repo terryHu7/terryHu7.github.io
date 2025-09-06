@@ -2,7 +2,7 @@ baseURL = 'https://terryHu7.github.io'
 defaultContentLanguage = "zh"
 languageCode = "zh-Hans"
 title = "Terry's Blog"
-theme = 'dream'
+theme = "dream"
 
 enableGitInfo = true
 enableRobotsTXT = true
@@ -39,20 +39,19 @@ avatar = "/img/avatar.jpg"
 headerTitle = "Terry's Blog"
 motto = "S'all good!"
 rss = true
-utterancesRepo = "terryHu7/terryHu7.github.io"
 
 email = "huty1998@outlook.com"
 siteStartYear = 2025
 
 # options
-stickyNav = true
+# stickyNav = true
 reorderNavItems = ["about", "search", "github", "posts", "categories", "tags", "rss"]
-collapseNavItems = ["posts", "categories", "tags", "rss"]
-showTableOfContents = true
-showSummaryCoverInPost = true
-imageZoomableInPost = true
-showPrevNextPost = true
-reorderShares = ["x"]
+#collapseNavItems = ["posts", "categories", "tags", "rss"]
+#showTableOfContents = true
+#showSummaryCoverInPost = true
+#imageZoomableInPost = true
+#showPrevNextPost = true
+#reorderShares = ["x"]
 
 [params.social]
 twitter = "21Terrence1"
@@ -60,9 +59,9 @@ twitter = "21Terrence1"
 [params.navItems]
 github = { href = "https://github.com/terryHu7", target = "_blank", icon = "logo-github", title = "GitHub" }
 
-[params.advanced]
-customCSS = ["css/custom.css"]
+# [params.advanced]
+# customCSS = ["css/custom.css"]
 
-[params.experimental]
-jsDate = true
-jsDateFormat = "yyyy年MM月dd日"
+# [params.experimental]
+# jsDate = true
+# jsDateFormat = "yyyy年MM月dd日"

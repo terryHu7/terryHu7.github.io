@@ -2,7 +2,7 @@ name: Build and deploy
 on:
   push:
     branches:
-      - 2025
+      - dev
   workflow_dispatch:
 permissions:
   contents: read
