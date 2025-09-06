@@ -5,9 +5,9 @@ lastmod: 2025-09-06T17:38:42+08:00
 author: Terry
 avatar: /img/avatar.jpg
 authorlink: https://terryHu7.github.io
-cover: "/img/avatar.jpg"
+cover: hugo-dream.jpg
 images:
-  - "/img/bridge.jpg"
+  - hugo-dream.jpg
 categories:
   - category1
 tags:
