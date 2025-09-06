@@ -7,13 +7,13 @@ avatar: /img/avatar.jpg
 authorlink: https://terryHu7.github.io
 cover: "/img/avatar.jpg"
 images:
-  - "/img/avatar.jpg"
+  - "/img/bridge.jpg"
 categories:
   - category1
 tags:
   - tag1
   - tag2
-draft: true
+draft: false
 ---
 
 Cut out summary from your post content here.
