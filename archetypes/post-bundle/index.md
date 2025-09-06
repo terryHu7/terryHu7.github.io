@@ -5,9 +5,9 @@ lastmod: {{ .Date }}
 author: Terry
 avatar: /img/avatar.jpg
 authorlink: https://terryhu7.github.io/
-cover: xx.jpg
+cover: cover.jpg
 images:
-  - xx.jpg
+  - cover.jpg
 # categories:
 #   - category1
 # tags:

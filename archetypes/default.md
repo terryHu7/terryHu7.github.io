@@ -2,23 +2,17 @@
 title: {{ replace .File.ContentBaseName "-" " " | title }}
 date: {{ .Date }}
 lastmod: {{ .Date }}
-author: Author Name
-# avatar: /img/author.jpg
-# authorlink: https://author.site
-cover: /img/cover.jpg
-# images:
-#   - /img/cover.jpg
-categories:
-  - category1
-tags:
-  - tag1
-  - tag2
-# nolastmod: true
+author: Terry
+avatar: /img/avatar.jpg
+authorlink: https://terryhu7.github.io/
+cover: xx.jpg
+images:
+  - xx.jpg
+# categories:
+#   - category1
+# tags:
+#   - tag1
+#   - tag2
 draft: false
 ---
 
-Cut out summary from your post content here.
-
-<!--more-->
-
-The remaining content of your post.
