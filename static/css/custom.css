@@ -1,3 +1,4 @@
+
 /* 文章整体添加不透明背景 */
 #dream-single-post-main {
   background-color: #ffffff;
@@ -40,9 +41,11 @@
 html.dark #dream-single-post-main {
   background-color: #1a1a1a;
 }
+
 html.dark #dream-single-post-content {
   background-color: #1a1a1a;
 }
+
 html.dark #dream-single-post-main header {
   background-color: #2d2d2d;
 }
