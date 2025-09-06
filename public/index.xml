@@ -2,18 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Terry&#39;s Blog</title>
-    <link>https://terryHu7.github.io/</link>
+    <link>http://localhost:54868/</link>
     <description>Recent content on Terry&#39;s Blog</description>
     <generator>Hugo</generator>
     <language>zh-Hans</language>
-    <lastBuildDate>Sun, 31 Aug 2025 09:40:55 +0800</lastBuildDate>
-    <atom:link href="https://terryHu7.github.io/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>First</title>
-      <link>https://terryHu7.github.io/posts/first/</link>
-      <pubDate>Sat, 30 Aug 2025 15:48:31 +0800</pubDate>
-      <guid>https://terryHu7.github.io/posts/first/</guid>
-      <description>&lt;p&gt;Cut out summary from your post content here.&lt;/p&gt;</description>
-    </item>
+    <atom:link href="http://localhost:54868/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
