@@ -34,18 +34,6 @@
   }
   
   #dream-single-post-main header {
-    background-color: #2d2d2d;
+    background-color: #1a1a1a;
   }
-}
-
-html.dark #dream-single-post-main {
-  background-color: #1a1a1a;
-}
-
-html.dark #dream-single-post-content {
-  background-color: #1a1a1a;
-}
-
-html.dark #dream-single-post-main header {
-  background-color: #2d2d2d;
 }
