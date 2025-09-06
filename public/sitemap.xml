@@ -2,10 +2,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:54868/categories/</loc>
+    <loc>https://terryHu7.github.io/categories/</loc>
   </url><url>
-    <loc>http://localhost:54868/tags/</loc>
+    <loc>https://terryHu7.github.io/tags/</loc>
   </url><url>
-    <loc>http://localhost:54868/</loc>
+    <loc>https://terryHu7.github.io/</loc>
   </url>
 </urlset>

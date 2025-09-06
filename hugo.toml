@@ -32,6 +32,7 @@ noClasses = false
 [params]
 lightTheme = "emerald"
 darkTheme = "forest"
+
 backgroundImage = "/img/bridge.jpg"
 backgroundImageDark = "/img/bridge.jpg"
 favicon = "/img/tree.ico"

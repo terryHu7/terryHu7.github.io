@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Terry&#39;s Blog</title>
-    <link>http://localhost:54868/</link>
+    <link>https://terryHu7.github.io/</link>
     <description>Recent content on Terry&#39;s Blog</description>
     <generator>Hugo</generator>
     <language>zh-Hans</language>
-    <atom:link href="http://localhost:54868/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://terryHu7.github.io/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
