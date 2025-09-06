@@ -1,46 +1,56 @@
-/* Custom styles for Dream theme v3 with daisyUI + TailwindCSS v4 */
+/* Custom styles for Dream theme v3 - 为文章内容添加半透明背景，提高文字可读性 */
 
-/* 为文章内容添加半透明背景，提高文字可读性 */
+/* 文章主容器 - 添加不透明背景 */
 #dream-single-post-main {
-  @apply bg-base-100/90 backdrop-blur-sm rounded-lg p-6 shadow-lg;
+  background-color: #ffffff;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  margin: 1rem 0;
 }
 
-/* 确保文章内容区域有足够的对比度 */
+/* 文章内容区域 - 纯白背景 */
 #dream-single-post-content {
-  @apply bg-base-100/95 rounded-lg p-4 mt-4;
+  background-color: #ffffff;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin-top: 1rem;
 }
 
-/* 为文章标题添加背景 */
+/* 文章标题区域 */
 #dream-single-post-main header {
-  @apply bg-base-100/80 rounded-lg p-4 mb-4;
+  background-color: #f8f9fa;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
 }
 
 /* 深色模式下的样式调整 */
 @media (prefers-color-scheme: dark) {
   #dream-single-post-main {
-    @apply bg-base-100/85;
+    background-color: #1a1a1a;
   }
   
   #dream-single-post-content {
-    @apply bg-base-100/90;
+    background-color: #1a1a1a;
   }
   
   #dream-single-post-main header {
-    @apply bg-base-100/75;
+    background-color: #2d2d2d;
   }
 }
 
 /* 手动切换到深色模式时的样式 */
 html.dark #dream-single-post-main {
-  @apply bg-base-100/85;
+  background-color: #1a1a1a;
 }
 
 html.dark #dream-single-post-content {
-  @apply bg-base-100/90;
+  background-color: #1a1a1a;
 }
 
 html.dark #dream-single-post-main header {
-  @apply bg-base-100/75;
+  background-color: #2d2d2d;
 }
 
 /* 确保文字在任何背景下都清晰可见 */
