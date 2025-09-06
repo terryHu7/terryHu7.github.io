@@ -9,60 +9,60 @@ enableRobotsTXT = true
 hasCJKLanguage = true
 
 [services]
-[services.disqus]
-shortname = "tianyu_hu"
-[services.googleAnalytics]
-ID = "12095195484"
+  [services.disqus]
+    shortname = "tianyu_hu"
+  [services.googleAnalytics]
+    ID = "12095195484"
 
 [markup]
-[markup.goldmark.parser]
-wrapStandAloneImageWithinParagraph = false
-[markup.goldmark.parser.attribute]
-block = true
-[markup.goldmark.renderer]
-unsafe = true
-[markup.goldmark.extensions.passthrough]
-enable = true
-[markup.goldmark.extensions.passthrough.delimiters]
-block = [['\[', '\]'], ['$$', '$$']]
-inline = [['\(', '\)'], ['$', '$']]
-[markup.highlight]
-noClasses = false
+  [markup.goldmark.parser]
+    wrapStandAloneImageWithinParagraph = false
+    [markup.goldmark.parser.attribute]
+      block = true
+  [markup.goldmark.renderer]
+    unsafe = true
+  [markup.goldmark.extensions.passthrough]
+    enable = true
+    [markup.goldmark.extensions.passthrough.delimiters]
+      block = [['\[', '\]'], ['$$', '$$']]
+      inline = [['\(', '\)'], ['$', '$']]
+  [markup.highlight]
+    noClasses = false
 
 [params]
-lightTheme = "emerald"
-darkTheme = "forest"
+  lightTheme = "emerald"
+  darkTheme = "forest"
 
-backgroundImage = "/img/bridge.jpg"
-backgroundImageDark = "/img/bridge.jpg"
-favicon = "/img/tree.ico"
-avatar = "/img/avatar.jpg"
-headerTitle = "Terry's Blog"
-motto = "S'all good!"
-rss = true
+  backgroundImage = "/img/bridge.jpg"
+  backgroundImageDark = "/img/bridge.jpg"
+  favicon = "/img/tree.ico"
+  avatar = "/img/avatar.jpg"
+  headerTitle = "Terry's Blog"
+  motto = "S'all good!"
+  rss = true
 
-email = "huty1998@outlook.com"
-siteStartYear = 2025
+  email = "huty1998@outlook.com"
+  siteStartYear = 2025
 
-# options
-stickyNav = true
-reorderNavItems = ["about", "search", "github", "posts", "categories", "tags", "rss"]
-collapseNavItems = ["posts", "categories", "tags", "rss"]
-showTableOfContents = true
-showSummaryCoverInPost = true
-imageZoomableInPost = true
-showPrevNextPost = true
-#reorderShares = ["x"]
+  # options
+  stickyNav = true
+  reorderNavItems = ["about", "search", "github", "posts", "categories", "tags", "rss"]
+  collapseNavItems = ["posts", "categories", "tags", "rss"]
+  showTableOfContents = true
+  showSummaryCoverInPost = true
+  imageZoomableInPost = true
+  showPrevNextPost = true
+  #reorderShares = ["x"]
 
-[params.social]
-twitter = "21Terrence1"
+  [params.social]
+    twitter = "21Terrence1"
 
-[params.navItems]
-github = { href = "https://github.com/terryHu7", target = "_blank", icon = "logo-github", title = "GitHub" }
+  [params.navItems]
+    github = { href = "https://github.com/terryHu7", target = "_blank", icon = "logo-github", title = "GitHub" }
 
-[params.advanced]
-customCSS = ["css/custom.css"]
+  [params.advanced]
+    customCSS = ["css/custom.css"]
 
-# [params.experimental]
-# jsDate = true
-# jsDateFormat = "yyyy年MM月dd日"
+  # [params.experimental]
+  #   jsDate = true
+  #   jsDateFormat = "yyyy年MM月dd日"
