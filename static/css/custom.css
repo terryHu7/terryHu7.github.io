@@ -1,6 +1,4 @@
-/* Custom styles for Dream theme v3 - 为文章内容添加半透明背景，提高文字可读性 */
-
-/* 文章主容器 - 添加不透明背景 */
+/* 文章整体添加不透明背景 */
 #dream-single-post-main {
   background-color: #ffffff;
   border-radius: 0.5rem;
@@ -19,7 +17,6 @@
 
 /* 文章标题区域 */
 #dream-single-post-main header {
-  background-color: #f8f9fa;
   border-radius: 0.5rem;
   padding: 1rem;
   margin-bottom: 1rem;
@@ -40,24 +37,12 @@
   }
 }
 
-/* 手动切换到深色模式时的样式 */
 html.dark #dream-single-post-main {
   background-color: #1a1a1a;
 }
-
 html.dark #dream-single-post-content {
   background-color: #1a1a1a;
 }
-
 html.dark #dream-single-post-main header {
   background-color: #2d2d2d;
-}
-
-/* 确保文字在任何背景下都清晰可见 */
-#dream-single-post-main {
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-}
-
-html.dark #dream-single-post-main {
-  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.1);
 }
