@@ -1,14 +1,11 @@
-/* 移除所有卡片的悬停背景效果 */
 .card.bg-base-100:hover {
   background-color: var(--color-base-100) !important;
 }
 
-/* 确保搜索页面的卡片也生效 */
 a.card:hover {
   background-color: var(--color-base-100) !important;
 }
 
-/* 更具体的选择器，确保覆盖TailwindCSS的hover效果 */
 .card.hover\:bg-base-content\/10:hover {
   background-color: var(--color-base-100) !important;
 }
