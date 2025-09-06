@@ -45,13 +45,13 @@ email = "huty1998@outlook.com"
 siteStartYear = 2025
 
 # options
-# stickyNav = true
+stickyNav = true
 reorderNavItems = ["about", "search", "github", "posts", "categories", "tags", "rss"]
-#collapseNavItems = ["posts", "categories", "tags", "rss"]
-#showTableOfContents = true
+collapseNavItems = ["posts", "categories", "tags", "rss"]
+showTableOfContents = true
 showSummaryCoverInPost = true
-#imageZoomableInPost = true
-#showPrevNextPost = true
+imageZoomableInPost = true
+showPrevNextPost = true
 #reorderShares = ["x"]
 
 [params.social]
