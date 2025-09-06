@@ -1,5 +1,0 @@
-/* Remove transparent hover background on cards */
-a.card.bg-base-100:hover,
-.card.bg-base-100:hover {
-  background-color: var(--color-base-100);
-}
