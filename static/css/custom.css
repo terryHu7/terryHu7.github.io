@@ -23,17 +23,25 @@
   margin-bottom: 1rem;
 }
 
-/* 深色模式下的样式调整 */
-@media (prefers-color-scheme: dark) {
-  #dream-single-post-main {
-    background-color: #1a1a1a;
-  }
-  
-  #dream-single-post-content {
-    background-color: #1a1a1a;
-  }
-  
-  #dream-single-post-main header {
-    background-color: #1a1a1a;
-  }
+/* 深色模式下的样式调整 - 使用DaisyUI主题选择器 */
+[data-theme="forest"] #dream-single-post-main {
+  background-color: #1a1a1a;
+  color: #e5e7eb;
+}
+
+[data-theme="forest"] #dream-single-post-content {
+  background-color: #1a1a1a;
+  color: #e5e7eb;
+}
+
+[data-theme="forest"] #dream-single-post-main header {
+  background-color: #1a1a1a;
+  color: #e5e7eb;
+}
+
+/* 确保在浅色模式下文字颜色正确 */
+[data-theme="emerald"] #dream-single-post-main,
+[data-theme="emerald"] #dream-single-post-content,
+[data-theme="emerald"] #dream-single-post-main header {
+  color: #1f2937;
 }
