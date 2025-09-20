@@ -1,5 +1,5 @@
 baseURL = 'https://terryHu7.github.io'
-defaultContentLanguage = "zh"
+defaultContentLanguage = "en"
 languageCode = "zh-Hans"
 title = "Terry's Blog"
 theme = "dream"
