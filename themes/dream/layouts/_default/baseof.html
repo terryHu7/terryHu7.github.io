@@ -17,6 +17,9 @@
     {{ end }}
 
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3/dist/cdn.min.js" integrity="sha256-4EHxtjnR5rL8JzbY12OKQJr81ESm7JBEb49ORPo29AY=" crossorigin="anonymous"></script>
+    
+    <!-- Live2D Widget -->
+    <script src="https://cdn.jsdelivr.net/npm/live2d-widget@3.1.4/lib/L2Dwidget.min.js"></script>
   </head>
 
   <body x-data="{
@@ -74,5 +77,37 @@
 
     <script type="module" src="https://cdn.jsdelivr.net/npm/ionicons@7.4.0/dist/ionicons/ionicons.esm.js" integrity="sha256-/IFmi82bIhdYWctu0UddSlJqpnzWm7Vh2C4CM32wF/k=" crossorigin="anonymous"></script>
     <script nomodule src="https://cdn.jsdelivr.net/npm/ionicons@7.4.0/dist/ionicons/ionicons.js" integrity="sha256-mr7eJMX3VC3F7G32mk4oWp1C6a2tlMYxUdptfT7uKI8=" crossorigin="anonymous"></script>
+    
+    <!-- Live2D Widget Initialization -->
+    <script>
+        // 确保L2Dwidget库加载完成后再初始化
+        window.addEventListener('load', function() {
+            if (typeof L2Dwidget !== 'undefined') {
+                L2Dwidget.init({
+                    "model": {
+                        jsonPath: "https://unpkg.com/live2d-widget-model-hijiki/assets/hijiki.model.json",
+                        "scale": 1
+                    },
+                    "display": {
+                        "position": "right",
+                        "width": 120,
+                        "height": 280,
+                        "hOffset": 0,
+                        "vOffset": -50
+                    },
+                    "mobile": {
+                        "show": true,
+                        "scale": 0.8
+                    },
+                    "react": {
+                        "opacityDefault": 1,
+                        "opacityOnHover": 0.1
+                    }
+                });
+            } else {
+                console.error('L2Dwidget library not loaded');
+            }
+        });
+    </script>
   </body>
 </html>
