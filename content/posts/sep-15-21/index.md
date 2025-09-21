@@ -11,8 +11,10 @@ images:
   - sg.jpg
 categories:
   - 九月
-# tags:
-#   - 
+tags:
+  - Singapore新加坡
+  - PostgreSQL
+  - Milvus
 draft: false
 ---
 
