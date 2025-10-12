@@ -10,7 +10,7 @@ document.addEventListener('alpine:init', () => {
           this.on = event.matches ? 'y' : 'n'
         })
 
-        this.on = 'auto'
+        this.on = 'y'
       }
 
       setTimeout(() => {
