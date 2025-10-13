@@ -8,6 +8,16 @@ enableGitInfo = true
 enableRobotsTXT = true
 hasCJKLanguage = true
 
+# 性能优化
+timeout = "30s"
+enableInlineShortcodes = true
+
+# 图片处理配置
+[imaging]
+  resampleFilter = "Lanczos"
+  quality = 85
+  anchor = "Smart"
+
 [services]
   [services.disqus]
     shortname = "tianyu_hu"
@@ -62,6 +72,30 @@ hasCJKLanguage = true
 
   [params.advanced]
     customCSS = ["css/custom.css"]
+    customJS = ["js/lazy-load.js"]
+
+# 缓存配置
+[caches]
+  [caches.getjson]
+    maxAge = "10m"
+  [caches.getcsv]
+    maxAge = "10m"
+  [caches.images]
+    maxAge = "1h"
+  [caches.assets]
+    maxAge = "1h"
+
+# 压缩配置
+[minify]
+  [minify.tdewolff]
+    [minify.tdewolff.html]
+      keepWhitespace = false
+    [minify.tdewolff.css]
+      keepCSS2 = true
+      precision = 0
+    [minify.tdewolff.js]
+      keepVarNames = false
+      precision = 0
 
   # [params.experimental]
   #   jsDate = true

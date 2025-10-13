@@ -23,6 +23,7 @@ jobs:
       HUGO_VERSION: 0.149.0
       NODE_VERSION: 22.18.0
       TZ: Europe/Oslo
+      HUGO_NUMWORKERMULTIPLIER: 2
     steps:
       - name: Checkout
         uses: actions/checkout@v5
@@ -72,21 +73,28 @@ jobs:
         id: cache-restore
         uses: actions/cache/restore@v4
         with:
-          path: ${{ runner.temp }}/hugo_cache
-          key: hugo-${{ github.run_id }}
-          restore-keys:
+          path: |
+            ${{ runner.temp }}/hugo_cache
+            ./resources
+          key: hugo-${{ hashFiles('**/go.sum', '**/package-lock.json') }}-${{ github.run_id }}
+          restore-keys: |
+            hugo-${{ hashFiles('**/go.sum', '**/package-lock.json') }}-
             hugo-
       - name: Build the site
         run: |
           hugo \
             --gc \
             --minify \
-            --cacheDir "${{ runner.temp }}/hugo_cache"
+            --enableGitInfo \
+            --cacheDir "${{ runner.temp }}/hugo_cache" \
+            --environment production
       - name: Cache save
         id: cache-save
         uses: actions/cache/save@v4
         with:
-          path: ${{ runner.temp }}/hugo_cache
+          path: |
+            ${{ runner.temp }}/hugo_cache
+            ./resources
           key: ${{ steps.cache-restore.outputs.cache-primary-key }}
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
