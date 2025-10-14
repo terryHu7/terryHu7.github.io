@@ -44,7 +44,7 @@ enableInlineShortcodes = true
   darkTheme = "forest"
 
   backgroundImage = "/img/bridge.jpg"
-  backgroundImageDark = "/img/bridge.jpg"
+  backgroundImageDark = ""
   favicon = "/img/tree.ico"
   avatar = "/img/avatar.jpg"
   headerTitle = "Terry's Blog"

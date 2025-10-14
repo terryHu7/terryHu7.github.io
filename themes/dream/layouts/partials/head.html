@@ -50,18 +50,28 @@
 {{ end }}
 <link rel="stylesheet" href="{{ $outputCss.RelPermalink }}" />
 
-{{ if or site.Params.backgroundImage site.Params.backgroundImageDark }}
-<style>
-{{ if site.Params.backgroundImage }}
-#dream-global-bg {
-  background-image: url({{ site.Params.backgroundImage | relURL }});
-}
-{{ end }}
+{{/* Preload background image(s) to keep them cached across page navigations */}}
+{{ $bg := site.Params.backgroundImage }}
+{{ $bgDark := site.Params.backgroundImageDark }}
+{{ if or $bg $bgDark }}
+  {{ if and $bg $bgDark }}
+    {{ if eq $bg $bgDark }}
+      <link rel="preload" as="image" href="{{ $bg | relURL }}" />
+    {{ else }}
+      <link rel="preload" as="image" href="{{ $bg | relURL }}" />
+      <link rel="preload" as="image" href="{{ $bgDark | relURL }}" />
+    {{ end }}
+  {{ else if $bg }}
+    <link rel="preload" as="image" href="{{ $bg | relURL }}" />
+  {{ else }}
+    <link rel="preload" as="image" href="{{ $bgDark | relURL }}" />
+  {{ end }}
 
-{{ if site.Params.backgroundImageDark }}
-html.dark #dream-global-bg {
-  background-image: url({{ site.Params.backgroundImageDark | relURL }});
-}
-{{ end }}
-</style>
+  {{/* Move conditional logic outside <style> to avoid CSS lint parsing errors */}}
+  {{ if $bg }}
+    <style>#dream-global-bg{background-image:url("{{ $bg | relURL }}");}</style>
+  {{ end }}
+  {{ if and $bgDark (not (eq $bg $bgDark)) }}
+    <style>html.dark #dream-global-bg{background-image:url("{{ $bgDark | relURL }}");}</style>
+  {{ end }}
 {{ end }}
