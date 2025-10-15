@@ -5,9 +5,9 @@ lastmod: 2025-09-13T16:01:00+08:00
 author: Terry
 avatar: /img/avatar.jpg
 authorlink: https://terryhu7.github.io/
-cover: cover.png
+cover: cover.jpg
 images: 
-  - cover.png
+- cover.jpg
   - life_path.png
 draft: false
 categories:
