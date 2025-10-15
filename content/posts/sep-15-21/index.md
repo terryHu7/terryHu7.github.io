@@ -18,6 +18,8 @@ tags:
 draft: false
 ---
 
+安排国庆游 | 迁移milvus向量到pg
+
 <!--more-->
 
 ## 🇸🇬 安排国庆出游计划

@@ -17,6 +17,8 @@ categories:
 draft: false
 ---
 
+节前工位主理人 | 购入Anker A1695
+
 <!--more-->
 
 👆国庆节前的工作状态
