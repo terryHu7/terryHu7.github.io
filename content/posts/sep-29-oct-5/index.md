@@ -12,9 +12,11 @@ categories:
   - 九月
   - 十月
 tags:
-  - 旅行
+  - Singapore新加坡
 draft: false
 ---
+
+🇸🇬出现又离开的六日旅途
 
 <!--more-->
 
