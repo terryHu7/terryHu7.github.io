@@ -5,9 +5,9 @@ lastmod: 2025-10-07T22:28:04+08:00
 author: Terry
 avatar: /img/avatar.jpg
 authorlink: https://terryhu7.github.io/
-cover: cover.png
+cover: cover.jpg
 images:
-  - cover.png
+- cover.jpg
   - anker.jpg
 
 categories:
