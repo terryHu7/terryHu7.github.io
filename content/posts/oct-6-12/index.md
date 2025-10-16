@@ -52,6 +52,8 @@ pydevd_pycharm.settrace('x.x.x.x', port=1234, stdoutToServer=True, stderrToServe
 
 ## 🎧 罗永浩对话影视飓风Tim
 
+![tim](tim.png)
+
 又是一期酣畅淋漓的三小时播客。不过话说回来，记得老罗在西贝事件的时候说播客会停更一周，下一周会连出两期。前些天坐飞机回来的时候还突然意识到节目应该更新了，后悔缓存下来正好路上听，不然只能无所事事。但结果下了飞机看居然还没更新，而且也没连更两期。
 
 回想一下节目中有意思的几点：
@@ -61,3 +63,13 @@ pydevd_pycharm.settrace('x.x.x.x', port=1234, stdoutToServer=True, stderrToServe
 4. Tim在布局一个帝国，衣服，综艺，影视，短剧，人文科普...
 
 ## 🌐 喜提域名terryhu.cn
+![terryhu.cn](website.png)
+
+促使我从github.io换到独立域名的，是想加入BlogFinder这个博客发现平台。
+
+向BlogFinder申请提交了很多次，但都石投大海，加到创建BlogFinder的老哥微信私信后才了解到需要独立域名这个门槛（其中一个原因是可以用域名是否过期判断博客是否还在更新）。
+
+遂后当天就去阿里云搜索了terryhu这个域名，在.top和.com.cn等后缀中选到.cn，修改了项目部署方式，当然过程中也踩了几个坑，例如换完发现图片加载的变慢，之后又去大善人cloudfare那里要了点饭，换了dns解析的地址，又在trae里让ai帮我分析并修复图片加载慢的原因，一套组合拳打下来后，网站加载速度终于好了很多。
+
+最终也是私信到BlogFinder老哥，顺利通过。
+
