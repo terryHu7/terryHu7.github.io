@@ -45,7 +45,7 @@ enableInlineShortcodes = true
 
   backgroundImage = "/img/bridge.jpg"
   backgroundImageDark = ""
-  favicon = "/img/tree.ico"
+  favicon = "/img/avatar.ico"
   avatar = "/img/avatar.jpg"
   headerTitle = "Terry's Blog"
   motto = "S'all good!"
