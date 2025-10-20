@@ -1,5 +1,5 @@
 ---
-title: 九月第二周
+title: 九月第二周 - 离职谢幕战
 date: 2025-09-13T22:07:07+08:00
 lastmod: 2025-09-14T13:50:58+08:00
 author: Terry
@@ -23,6 +23,7 @@ draft: false
 离职谢幕战 | 罗永浩仁科
 
 <!--more-->
+---
 
 ## 🔚 谢幕战
 ![court](court.png)
