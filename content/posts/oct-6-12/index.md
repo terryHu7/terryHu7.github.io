@@ -1,5 +1,5 @@
 ---
-title: 十月第二周
+title: 十月第二周 - 喜提域名
 date: 2025-10-15T22:49:06+08:00
 lastmod: 2025-10-15T22:49:06+08:00
 author: Terry
@@ -8,8 +8,8 @@ authorlink: https://terryhu7.github.io/
 cover: cover.jpg
 images:
 - cover.jpg
-# categories:
-#   - category1
+categories:
+  - 十月
 tags:
   - Pycharm
   - Podcast播客
@@ -19,6 +19,9 @@ draft: false
 Py远程调试 | 罗永浩Tim | 喜提域名
 
 <!--more-->
+---
+
+![](cover.jpg)
 
 ## 💻 Pycharm本地断点调试远程启动的项目
 
@@ -57,10 +60,10 @@ pydevd_pycharm.settrace('x.x.x.x', port=1234, stdoutToServer=True, stderrToServe
 又是一期酣畅淋漓的三小时播客。不过话说回来，记得老罗在西贝事件的时候说播客会停更一周，下一周会连出两期。前些天坐飞机回来的时候还突然意识到节目应该更新了，后悔缓存下来正好路上听，不然只能无所事事。但结果下了飞机看居然还没更新，而且也没连更两期。
 
 回想一下节目中有意思的几点：
-1. Tim居然是杭州人
-2. Tim居然说自己是I人，但是又是体验电击枪，又是潜水拍抹香鲸，又是荒岛求生直播，还要去蛇岛，这多少沾点表演型人格吧...
-3. Tim真是一个纯粹之人，拒绝融资，不买豪车，衣着朴素
-4. Tim在布局一个帝国，衣服，综艺，影视，短剧，人文科普...
+1. Tim是杭州人
+2. Tim说自己是I人，但是又是体验电击枪，又是潜水拍抹香鲸，又是荒岛求生直播，还要去蛇岛，这多少沾点表演型人格吧...
+3. Tim是一个纯粹的人，拒绝融资，不买豪车，衣着朴素
+4. Tim布局一个帝国，衣服，综艺，影视，短剧，人文科普...
 
 ## 🌐 喜提域名terryhu.cn
 ![terryhu.cn](website.png)

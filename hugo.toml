@@ -12,7 +12,6 @@ hasCJKLanguage = true
 timeout = "30s"
 enableInlineShortcodes = true
 
-# 图片处理配置
 [imaging]
   resampleFilter = "Lanczos"
   quality = 85
@@ -59,7 +58,7 @@ enableInlineShortcodes = true
   reorderNavItems = ["about", "search", "github", "posts", "categories", "tags", "rss"]
   collapseNavItems = ["posts", "categories", "tags", "rss"]
   showTableOfContents = true
-  showSummaryCoverInPost = true
+  showSummaryCoverInPost = false
   imageZoomableInPost = true
   showPrevNextPost = true
   #reorderShares = ["x"]
