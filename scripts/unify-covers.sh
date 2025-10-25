@@ -99,7 +99,15 @@ ensure_jpeg_size_limit() { # in out
 
 extract_cover_from_front_matter() { # index.md -> prints file name (may be empty)
   local index="$1"
-  sed -n '/^---$/,/^---$/p' "$index" | grep '^cover:' | head -1 | sed 's/^cover:[[:space:]]*//' | sed 's/["\047]//g'
+  awk '
+    BEGIN{in=0}
+    /^---[[:space:]]*$/{ if(in==0){in=1;next} else{in=0} }
+    in && /^cover:[[:space:]]*/{
+      gsub(/^cover:[[:space:]]*/, "", $0);
+      gsub(/\"|'\''/, "", $0);
+      print $0; exit
+    }
+  ' "$index"
 }
 
 update_front_matter_refs() { # index.md stem old_ext new_ext
@@ -120,8 +128,8 @@ process_cover_file() { # dir name
   local ext="${name##*.}"
   local stem="${name%.*}"
   local tmp_work tmp_crop
-  tmp_work="$(mktemp -t "unify-cover-XXXX").$ext"
-  tmp_crop="$(mktemp -t "unify-cover-XXXX").$ext"
+  tmp_work="$(mktemp "/tmp/unify-cover-XXXX.$ext")"
+  tmp_crop="$(mktemp "/tmp/unify-cover-XXXX.$ext")"
   cp "$src" "$tmp_work"
   if [ "$BACKUP" = "true" ]; then
     cp "$src" "$dir/${stem}@orig.$ext"
