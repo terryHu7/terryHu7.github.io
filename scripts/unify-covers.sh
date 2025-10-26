@@ -62,8 +62,7 @@ shift $((OPTIND-1))
 crop_to_16x9() { # in out
   local in="$1" out="$2"
   local W H NEW_W NEW_H
-  W=$(sips -g pixelWidth "$in" | awk '/pixelWidth/ {print $2}')
-  H=$(sips -g pixelHeight "$in" | awk '/pixelHeight/ {print $2}')
+  read W H < <(sips -g pixelWidth -g pixelHeight "$in" | awk '/pixelWidth/ {w=$2} /pixelHeight/ {h=$2} END{print w, h}')
   if [ -z "${W:-}" ] || [ -z "${H:-}" ]; then
     die "Failed to read dimensions for $in"
   fi
@@ -100,9 +99,9 @@ ensure_jpeg_size_limit() { # in out
 extract_cover_from_front_matter() { # index.md -> prints file name (may be empty)
   local index="$1"
   awk '
-    BEGIN{in=0}
-    /^---[[:space:]]*$/{ if(in==0){in=1;next} else{in=0} }
-    in && /^cover:[[:space:]]*/{
+    BEGIN{inside=0}
+    /^---[[:space:]]*$/{ if(inside==0){inside=1;next} else{inside=0} }
+    inside && /^cover:[[:space:]]*/{
       gsub(/^cover:[[:space:]]*/, "", $0);
       gsub(/\"|'\''/, "", $0);
       print $0; exit
@@ -128,8 +127,8 @@ process_cover_file() { # dir name
   local ext="${name##*.}"
   local stem="${name%.*}"
   local tmp_work tmp_crop
-  tmp_work="$(mktemp "/tmp/unify-cover-XXXX.$ext")"
-  tmp_crop="$(mktemp "/tmp/unify-cover-XXXX.$ext")"
+  tmp_work="$(mktemp -t unify-cover-work.XXXXXX)"
+  tmp_crop="$(mktemp -t unify-cover-crop.XXXXXX)"
   cp "$src" "$tmp_work"
   if [ "$BACKUP" = "true" ]; then
     cp "$src" "$dir/${stem}@orig.$ext"
