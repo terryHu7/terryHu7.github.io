@@ -8,11 +8,14 @@ authorlink: https://terryhu7.github.io/
 cover: cover.jpg
 images:
 - cover.jpg
-# categories:
-#   - category1
-# tags:
-#   - tag1
-#   - tag2
+categories:
+  - 十月
+  - 十一月
+tags:
+  - Family家人
+  - Podcast播客  
+  - FixUpHouse装修
+  - CertificationExam考证
 draft: false
 ---
 
@@ -43,6 +46,6 @@ draft: false
 这周日一早闲鱼120找了师傅来装锁，新家装修终于搞完了七七八八。待之后收尾完必须好好写一篇装修记录。
 
 ## 罗永浩✖️贾樟柯
-![](jia_zhang_ke.png)
+![](jia_zhangke.png)
 
 有一说一，这一期没听进去，对于贾樟柯导演不了解，只是名字有所耳闻，搜了一下好像也是一部作品都没看过，但听完下来感觉贾导也是一位真诚的人。
