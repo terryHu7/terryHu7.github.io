@@ -5,9 +5,9 @@ lastmod: 2025-11-07T20:59:03+08:00
 author: Terry
 avatar: /img/avatar.jpg
 authorlink: https://terryhu7.github.io/
-cover: cover.jpeg
+cover: cover.jpg
 images:
-  - cover.jpeg
+- cover.jpg
 categories:
   - 十一月
 tags:
@@ -35,7 +35,7 @@ draft: false
 
 准考证打印出来才看到，这次的软考还是浙江财经大学，甚至还是上次那栋楼，而且我还是没准备好。但和上次五月份相比，不一样的是这次的季节已是深秋。
 
-![](autumn.jpeg)
+![](autumn.jpg)
 
 这次选择题以为过了一遍b站上的真题解析稳了，结果上午考试时一开始就连续标记了十几题不确定的，以至于我都看了看考的试是不是系统架构设计师，各种稀奇古怪的题目。
 
