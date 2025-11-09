@@ -8,7 +8,7 @@ set -euo pipefail
 # - Optionally keeps a backup of the original as <name>@orig.<ext> when --backup is set
 #
 # Usage:
-#   scripts/unify-covers.sh [options] [post_dir ...]
+#   scripts/unify-covers.sh [options] [post_dir_or_file ...]
 # Options:
 #   -r ROOT       Root directory to scan (default: content/posts)
 #   -w WIDTH      Target width (default: 1600)
@@ -22,6 +22,7 @@ set -euo pipefail
 #   scripts/unify-covers.sh -b
 #   scripts/unify-covers.sh -w 1920 -h 1080 -l 500000
 #   scripts/unify-covers.sh content/posts/sep-1-7 content/posts/oct-6-12
+#   scripts/unify-covers.sh content/posts/sep-1-7/my-cover.png
 #
 # Note: Requires macOS 'sips' command.
 
@@ -178,8 +179,22 @@ process_post_dir() { # dir
 main() {
   if [ "$#" -gt 0 ]; then
     for d in "$@"; do
-      [ -d "$d" ] || { die "Not a directory: $d"; }
-      process_post_dir "$d"
+      if [ -f "$d" ]; then
+        process_cover_file "$(dirname "$d")" "$(basename "$d")"
+        local index_md
+        index_md="$(dirname "$d")/index.md"
+        if [ -f "$index_md" ]; then
+          local old_name old_ext stem
+          old_name="$(basename "$d")"
+          old_ext="${old_name##*.}"
+          stem="${old_name%.*}"
+          update_front_matter_refs "$index_md" "$stem" "$old_ext" "jpg"
+        fi
+      elif [ -d "$d" ]; then
+        process_post_dir "$d"
+      else
+        die "Not a valid file or directory: $d"
+      fi
     done
   else
     if [ ! -d "$ROOT" ]; then
