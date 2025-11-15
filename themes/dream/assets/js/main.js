@@ -8,10 +8,7 @@ document.addEventListener('alpine:init', function () {
       if (isDark) {
         this.on = isDark;
       } else {
-        this.mql.addEventListener('change', function (event) {
-          _this.on = event.matches ? 'y' : 'n';
-        });
-        this.on = 'auto';
+        this.on = 'y';
       }
       setTimeout(function () {
         _this.setThemeForUtterances();
