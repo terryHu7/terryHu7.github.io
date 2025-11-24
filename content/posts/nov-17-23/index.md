@@ -1,5 +1,5 @@
 ---
-title: 十一月第三周 - Nana Banana
+title: 十一月第三周 - Nano Banana
 date: 2025-11-23T15:18:48+08:00
 lastmod: 2025-11-23T15:18:48+08:00
 author: Terry
