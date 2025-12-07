@@ -10,7 +10,7 @@ images:
   - script.jpg
   - sg.jpg
 categories:
-  - 九月
+  - Sep
 tags:
   - Singapore新加坡
   - PostgreSQL

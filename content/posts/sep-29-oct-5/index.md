@@ -9,8 +9,8 @@ cover: cover.jpg
 images:
   - cover.jpg
 categories:
-  - 九月
-  - 十月
+  - Sep
+  - Oct
 tags:
   - Singapore新加坡
 draft: false

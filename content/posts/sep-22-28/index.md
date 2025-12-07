@@ -11,7 +11,7 @@ images:
   - anker.jpg
 
 categories:
-  - 九月
+  - Sep
 # tags:
 #   - tag1
 draft: false

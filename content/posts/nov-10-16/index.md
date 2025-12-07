@@ -9,7 +9,7 @@ cover: cover.jpg
 images:
 - cover.jpg
 categories:
-  - 十一月
+  - Nov
 tags:
   - Podcast播客
   - MeaningOfLife人生的意义

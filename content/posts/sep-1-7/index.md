@@ -11,7 +11,7 @@ images:
   - life_path.png
 draft: false
 categories:
-  - 九月
+  - Sep
 keywords: []
 ---
 
