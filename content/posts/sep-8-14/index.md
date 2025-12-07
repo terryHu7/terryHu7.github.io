@@ -13,7 +13,7 @@ images:
   - replay.png
   - ren_ke.jpg
 categories:
-  - 九月
+  - Sep
 tags:
   - BasketBall篮球
   - Podcast播客

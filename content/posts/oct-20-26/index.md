@@ -9,7 +9,7 @@ cover: cover.jpg
 images:
 - cover.jpg
 categories:
-  - 十月
+  - Oct
 tags:
   - Podcast播客
   - CertificationExam考证

@@ -9,8 +9,8 @@ cover: cover.jpg
 images:
 - cover.jpg
 categories:
-  - 十月
-  - 十一月
+  - Oct
+  - Nov
 tags:
   - Family家人
   - Podcast播客  
