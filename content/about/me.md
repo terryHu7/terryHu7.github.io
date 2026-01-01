@@ -7,5 +7,5 @@ Hi 大家好，我是Terry
 
 Email: huty1998@outlook.com
 
-![Terry](/img/me.png)
+![Terry](/img/me.jpeg)
 

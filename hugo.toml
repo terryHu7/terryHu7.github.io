@@ -23,6 +23,9 @@ enableInlineShortcodes = true
   [services.googleAnalytics]
     ID = "12095195484"
 
+[permalinks]
+  posts = "/posts/:year/:slug/"
+
 [markup]
   [markup.goldmark.parser]
     wrapStandAloneImageWithinParagraph = false
