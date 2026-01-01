@@ -200,9 +200,9 @@ main() {
     if [ ! -d "$ROOT" ]; then
       die "Root directory not found: $ROOT"
     fi
-    for d in "$ROOT"/*; do
-      [ -d "$d" ] || continue
-      process_post_dir "$d"
+    # Recursively find all directories containing index.md
+    find "$ROOT" -name "index.md" -print0 | while IFS= read -r -d '' index_file; do
+      process_post_dir "$(dirname "$index_file")"
     done
   fi
   log "Done."
