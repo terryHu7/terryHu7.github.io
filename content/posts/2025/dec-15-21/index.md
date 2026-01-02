@@ -8,8 +8,6 @@ authorlink: https://terryhu7.github.io/
 cover: cover.jpg
 images:
 - cover.jpg
-categories:
-  - Dec十二月
 tags:
   - Podcast播客
   - Movie电影

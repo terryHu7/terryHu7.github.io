@@ -12,8 +12,6 @@ images:
   - podcast.jpg
   - replay.png
   - ren_ke.jpg
-categories:
-  - Sep
 tags:
   - BasketBall篮球
   - Podcast播客

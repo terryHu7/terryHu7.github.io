@@ -8,8 +8,6 @@ authorlink: https://terryhu7.github.io/
 cover: cover.jpg
 images:
 - cover.jpg
-categories:
-  - Dec十二月
 # tags:
 #   - tag1
 #   - tag2

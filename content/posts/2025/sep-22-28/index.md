@@ -10,8 +10,6 @@ images:
 - cover.jpg
   - anker.jpg
 
-categories:
-  - Sep
 # tags:
 #   - tag1
 draft: false
