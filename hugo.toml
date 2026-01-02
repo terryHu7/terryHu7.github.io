@@ -58,8 +58,8 @@ enableInlineShortcodes = true
 
   # options
   stickyNav = true
-  reorderNavItems = ["about", "search", "github", "posts", "categories", "tags", "rss"]
-  collapseNavItems = ["posts", "categories", "tags", "rss"]
+  reorderNavItems = ["about", "portfolio", "posts", "categories", "tags", "search", "github", "rss"]
+  # collapseNavItems = ["portfolio", "posts", "categories", "tags", "rss"]
   showTableOfContents = true
   showSummaryCoverInPost = false
   imageZoomableInPost = true
@@ -71,6 +71,7 @@ enableInlineShortcodes = true
 
   [params.navItems]
     github = { href = "https://github.com/terryHu7", target = "_blank", icon = "logo-github", title = "GitHub" }
+    portfolio = { href = "/portfolio", title = "Portfolio", icon = "briefcase" }
 
   [params.advanced]
     customCSS = ["css/custom.css"]
