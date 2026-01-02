@@ -8,9 +8,6 @@ authorlink: https://terryhu7.github.io/
 cover: cover.jpg
 images:
 - cover.jpg
-categories:
-  - Oct
-  - Nov
 tags:
   - Family家人
   - Podcast播客  

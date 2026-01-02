@@ -8,8 +8,6 @@ authorlink: https://terryhu7.github.io/
 cover: cover.jpg
 images:
 - cover.jpg
-categories:
-  - Nov
 tags:
   - CertificationExam考证
 draft: false

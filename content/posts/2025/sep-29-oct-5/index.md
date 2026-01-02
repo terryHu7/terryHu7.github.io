@@ -8,9 +8,6 @@ authorlink: https://terryhu7.github.io/
 cover: cover.jpg
 images:
   - cover.jpg
-categories:
-  - Sep
-  - Oct
 tags:
   - Singapore新加坡
 draft: false

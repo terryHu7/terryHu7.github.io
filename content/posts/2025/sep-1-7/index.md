@@ -10,8 +10,6 @@ images:
 - cover.jpg
   - life_path.png
 draft: false
-categories:
-  - Sep
 keywords: []
 ---
 

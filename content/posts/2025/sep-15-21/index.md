@@ -9,8 +9,6 @@ cover: sg.jpg
 images:
   - script.jpg
   - sg.jpg
-categories:
-  - Sep
 tags:
   - Singapore新加坡
   - PostgreSQL
