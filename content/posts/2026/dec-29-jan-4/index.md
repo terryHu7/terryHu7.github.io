@@ -16,7 +16,7 @@ images:
 draft: false
 ---
 
-offer｜同学聚会｜下厨
+offer｜大学室友聚会｜下厨
 
 <!--more-->
 ---

@@ -7,7 +7,7 @@ avatar: /img/avatar.jpg
 authorlink: https://terryhu7.github.io/
 cover: cover.jpg
 images:
-  - cover.jpg
+- cover.jpg
 tags:
   - CertificationExam考证
 draft: false
