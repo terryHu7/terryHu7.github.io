@@ -19,9 +19,9 @@ Py远程调试 | 罗永浩Tim | 喜提域名
 <!--more-->
 ---
 
-![](cover.jpg)
-
 ## 💻 Pycharm本地断点调试远程启动的项目
+
+![](pycharm.jpg) 
 
 目的在于记录和梳理整个探索的流程，细节方面如有需要的可以联系我
 
@@ -64,7 +64,8 @@ pydevd_pycharm.settrace('x.x.x.x', port=1234, stdoutToServer=True, stderrToServe
 4. Tim在布局一个帝国，涉猎衣服，综艺，影视，短剧，人文科普...
 
 ## 🌐 喜提域名terryhu.cn
-![terryhu.cn](website.png)
+
+![terryhu.cn](cover.jpg)
 
 促使我从github.io换到独立域名的，是想加入BlogFinder这个博客发现平台。
 

@@ -61,6 +61,7 @@ enableInlineShortcodes = true
   reorderNavItems = ["about", "portfolio", "posts", "categories", "tags", "search", "github", "rss"]
   # collapseNavItems = ["portfolio", "posts", "categories", "tags", "rss"]
   showTableOfContents = true
+  noDefaultSummaryCover = true
   showSummaryCoverInPost = false
   imageZoomableInPost = true
   showPrevNextPost = true
