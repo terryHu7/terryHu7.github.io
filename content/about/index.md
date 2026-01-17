@@ -1,3 +1,3 @@
 ---
-headless: true
+title: About
 ---
