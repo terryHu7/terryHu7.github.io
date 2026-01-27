@@ -4,6 +4,9 @@ languageCode = "zh-Hans"
 title = "Terry's Blog"
 theme = "dream"
 
+[pagination]
+  pagerSize = 12
+
 enableGitInfo = true
 enableRobotsTXT = true
 hasCJKLanguage = true
