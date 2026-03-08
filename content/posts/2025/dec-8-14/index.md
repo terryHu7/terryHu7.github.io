@@ -5,9 +5,9 @@ lastmod: 2025-12-13T21:15:23+08:00
 author: Terry
 avatar: /img/avatar.jpg
 authorlink: https://terryhu7.github.io/
-cover: cover.jpg
+cover: cover.jpeg
 images:
-- cover.jpg
+- cover.jpeg
 tags:
   - Podcast播客
 draft: false
@@ -20,14 +20,14 @@ draft: false
 
 ## 🚙 咱特斯拉自己的nomi———TITA饼
 
-![黄昏见证真正的信徒](cover.jpg)
+![黄昏见证真正的信徒](cover.jpeg)
 
 趁着双十二终于下单了TITA饼➕坤坤假发，这俩在我购物车待了半年，一开始怕冲动消费，毕竟TITA这一套下来要七百，蔡徐坤头发更是离谱，小一百块钱。但是半年中发现自己每每看到还是会乐一下，平时自己开车逛时也总觉得无聊，有了这个搭子能多点乐趣，拿下。
 
 
 ## 🎧 罗永浩✖️MiniMax创始人闫俊杰
 
-![](yan_junjie.png)
+![](yan_junjie.jpeg)
 
 有一说一听完的总体感觉并没预期好，印象在往期节目里倒数第二，倒数第一是谁就不说了，那一期我甚至没加在每周博客里。
 
@@ -41,4 +41,4 @@ draft: false
 简单检索了一下就在几款工具中选到了tabby。UI做的比mobaxterm年轻多了，有种系统从windows xp换macos的感觉。自己每次安装一款新app都喜欢摸索一遍设置，一方面能根据设置熟悉一下有哪些功能，另一方面也能通过设置调整自己的偏好。
 
 安装完毕后就装了zsh和oh-my-zsh，选了af-magic主题。这个主题有完整当前路径的展示，每行命令结果之间都有分隔符，另外最后还有执行时间。
-![](terminal.png)
+![](terminal.jpeg)

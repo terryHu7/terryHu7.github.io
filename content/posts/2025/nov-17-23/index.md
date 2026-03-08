@@ -5,9 +5,9 @@ lastmod: 2025-11-23T15:18:48+08:00
 author: Terry
 avatar: /img/avatar.jpg
 authorlink: https://terryhu7.github.io/
-cover: cover.jpg
+cover: cover.jpeg
 images:
-- cover.jpg
+- cover.jpeg
 tags:
   - Podcast播客
 
@@ -20,7 +20,7 @@ draft: false
 ---
 
 ## 🎧 罗永浩✖️何同学
-![](he_tongxue.webp)
+![](he_tongxue.jpeg)
 这期的"盲盒"抽到的是何同学，和往期嘉宾一样，无一例外又是一个谈吐之间尽显真诚的嘉宾。
 
 搜了下何同学99年出生，比我小一岁，其实在自媒体时代太多00后的网红博主，九几年甚至都是老一辈了。也的确，自己也是奔三的人了。
@@ -48,11 +48,11 @@ LeetCode里有一类题目是"贪心算法"，每次需要做选择时都出局�
 
 lovart.ai/上体验了nano banana pro——
 
-![](home.jpg)
+![](home.jpeg)
 
 输入一张正在装修的照片，让他帮我设计设计，带我想要黑色沙发、家里小猫之类的需求
 输出的设计图效果真的不错：
 
-![](banana_design.jpg)
+![](banana_design.jpeg)
 
 
