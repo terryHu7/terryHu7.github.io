@@ -5,10 +5,10 @@ lastmod: 2025-09-13T16:01:00+08:00
 author: Terry
 avatar: /img/avatar.jpg
 authorlink: https://terryhu7.github.io/
-cover: cover.jpg
+cover: cover.jpeg
 images: 
-- cover.jpg
-  - life_path.png
+- cover.jpeg
+  - life_path.jpeg
 draft: false
 keywords: []
 ---
@@ -20,7 +20,7 @@ keywords: []
 
 ## 我的答案
 
-![](cover.jpg)
+![](cover.jpeg)
 
 其实自己很多年前就整过个人博客，换过很多框架，jekyll，hexo之类的，主题也是一换再换，但结果就是都没坚持下去。
 
@@ -30,6 +30,6 @@ keywords: []
 
 这个问题乍一听挺深刻的，但是也挺老生常谈的，因为我相信每个人多多少少都有问过自己这种问题，因为这个问题的影响实在太大了，因为你如果回答不了这个问题，很多事情做起来是会很拧巴的，你自己都不知道在追求什么，那只能被情绪牵着走，做一个永远趋利避害，普普通通的人。但如果你明确的回答了这个问题，可能是更可怕的，因为人的阅历是有限的，以当前的阅历回答了这个终极问题，可能会让你错过了一个更加美好的未来，这完全上升到了一个哲学问题。
 
-![life path](life_path.png)
+![life path](life_path.jpeg)
 
 但我还是以我目前的阅历，冒险做出了一个回答，这个回答也就顺便解释了我做个人博客网站的意义，至于我的回答是什么，这里就不展开了，但是未来都会体验在我的网站里，换句话说，我的网站方方面面都在解释我对于这个问题的答案。

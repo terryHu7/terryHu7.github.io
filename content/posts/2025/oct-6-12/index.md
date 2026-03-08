@@ -5,9 +5,9 @@ lastmod: 2025-10-15T22:49:06+08:00
 author: Terry
 avatar: /img/avatar.jpg
 authorlink: https://terryhu7.github.io/
-cover: cover.jpg
+cover: cover.jpeg
 images:
-- cover.jpg
+- cover.jpeg
 tags:
   - Pycharm
   - Podcast播客
@@ -21,7 +21,7 @@ Py远程调试 | 罗永浩Tim | 喜提域名
 
 ## 💻 Pycharm本地断点调试远程启动的项目
 
-![](pycharm.jpg) 
+![](pycharm.jpeg) 
 
 目的在于记录和梳理整个探索的流程，细节方面如有需要的可以联系我
 
@@ -53,7 +53,7 @@ pydevd_pycharm.settrace('x.x.x.x', port=1234, stdoutToServer=True, stderrToServe
 
 ## 🎧 罗永浩对话影视飓风Tim
 
-![tim](tim.png)
+![tim](tim.jpeg)
 
 又是一期酣畅淋漓的三小时播客。不过话说回来，记得老罗在西贝事件的时候说播客会停更一周，下一周会连出两期。前些天坐飞机回来的时候还突然意识到节目应该更新了，后悔缓存下来正好路上听，不然只能无所事事。但结果下了飞机看居然还没更新，而且也没连更两期。
 
@@ -65,7 +65,7 @@ pydevd_pycharm.settrace('x.x.x.x', port=1234, stdoutToServer=True, stderrToServe
 
 ## 🌐 喜提域名terryhu.cn
 
-![terryhu.cn](cover.jpg)
+![terryhu.cn](cover.jpeg)
 
 促使我从github.io换到独立域名的，是想加入BlogFinder这个博客发现平台。
 

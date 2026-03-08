@@ -5,9 +5,9 @@ lastmod: 2025-10-25T21:55:38+08:00
 author: Terry
 avatar: /img/avatar.jpg
 authorlink: https://terryhu7.github.io/
-cover: cover.jpg
+cover: cover.jpeg
 images:
-- cover.jpg
+- cover.jpeg
 tags:
   - Podcast播客
   - CertificationExam考证
@@ -19,8 +19,8 @@ draft: false
 <!--more-->
 ---
 ## 罗永浩 ✖️（宋方金➕叶国富）
-![](song_fangjin.png)
-![](ye_guofu.png)
+![](song_fangjin.jpeg)
+![](ye_guofu.jpeg)
 这周连着听了罗老师的两期播客，一期聊文学，嘉宾是编剧宋方金，另一期聊商业，嘉宾是名创优品老板叶国富。每期节目的嘉宾都像开盲盒一样。
 
 每期节目都长达好几个小时，宋方金那期更是长达5个半小时，要知道一部电影也就两三个小时。宋方金讲故事的能力很强，节目一开头算命先生说他们村会出一个世界级文人的故事就直接给我听进去了。我就走路时戴耳机听，开车时听，吃饭时听，坐地铁时听。回想起来全程都没有觉得无聊想跳过的地方，多的倒是有时侯手滑动了进度条，或是吃饭时不仅想听还想看，就去B站找对应的位置。
