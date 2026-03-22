@@ -5,9 +5,9 @@ lastmod: 2026-03-20T23:48:09+08:00
 author: Terry
 avatar: /img/avatar.jpg
 authorlink: https://terryhu7.github.io/
-cover: cover.jpg
+cover: cover.jpeg
 images:
-  - cover.jpg
+  - cover.jpeg
 # categories:
 #   - category1
 # tags:
@@ -16,14 +16,14 @@ images:
 draft: false
 ---
 
-人才市场｜Vibe Coding｜油菜花｜义乌
+招聘会｜Vibe Coding｜油菜花｜义乌
 
 <!--more-->
 ---
 
 ## 🏟️ 杭州起跑春天人才市场
 
-周末陪老婆去了号称近年来杭州最大规模的杭州起跑春天人才市场 [[🔗]](https://www.hzrc.com/info/2026/2026spring/index.html)，举办于杭州大会展中心，上次来这还是看车展，没想到这次同样的场馆，摇身一变成了招聘的地方。
+周末陪老婆去了号称近年来杭州最大规模的杭州起跑春天人才市场 [🔗](https://www.hzrc.com/info/2026/2026spring/index.html)，举办于杭州大会展中心，上次来这还是看车展，没想到这次同样的场馆，摇身一变成了招聘的地方。
 
 还剩下两个路口的时候就感受到巨大的人流量，远远的看过去求职的人就像蚂蚁搬家一样的，四面八方的人汇集到场馆门口。
 
