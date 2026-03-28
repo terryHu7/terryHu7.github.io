@@ -79,7 +79,6 @@ enableInlineShortcodes = true
 
   [params.advanced]
     customCSS = ["css/custom.css"]
-    customJS = ["js/lazy-load.js"]
 
 # 缓存配置
 [caches]

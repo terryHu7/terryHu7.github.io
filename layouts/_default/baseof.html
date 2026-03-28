@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="{{ site.LanguageCode }}"
+  x-data
+  :class="$store.darkMode.class()"
+  :data-theme="$store.darkMode.theme()">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ block "title" . -}} {{ T "home" }} {{- end }} | {{ site.Title }}</title>
+
+    <!-- DNS prefetch & preconnect for CDN domains -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+    <link rel="preconnect" href="https://unpkg.com" crossorigin>
+    <link rel="dns-prefetch" href="https://unpkg.com">
+
+    {{ partial "head.html" . }}
+
+    {{ block "css" . }} {{ end }}
+
+    {{ range site.Params.Advanced.customCSS }}
+    <link rel="stylesheet" href="{{ . | relURL }}" />
+    {{ end }}
+
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.15.1/dist/cdn.min.js" integrity="sha256-Rmqrc5SKeSLTSnQ9shSKWmJco1ks8c1hLI8UG2Np03M=" crossorigin="anonymous"></script>
+  </head>
+
+  <body x-data="{
+    flip: false,
+  }">
+    <!-- If backgroundImage defined -->
+    <div id="dream-global-bg"></div>
+
+    {{ partial "nav.html" . }}
+
+    <div class="flip-container" :class="{ 'flip-it': flip }">
+      <div class="flipper">
+        <div class="front">
+          <div class="container">
+            {{ block "main" . }} {{ end }}
+
+            {{ partial "footer.html" . }}
+          </div>
+        </div>
+        <div class="back">
+          <div class="container">
+            {{ if site.Params.zenMode }}
+            {{ partial "zen-back.html" . }}
+            {{ else }}
+            {{ partial "back.html" . }}
+            {{ end }}
+
+            {{ partial "footer.html" . }}
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {{ partial "scripts.html" . }}
+    {{ block "js" . }} {{ end }}
+
+    {{ if .Store.Get "hasMermaid" }}
+      <script type="module">
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11.4.1/dist/mermaid.esm.min.mjs';
+        mermaid.initialize({ startOnLoad: true });
+      </script>
+    {{ end }}
+
+    {{ if .Store.Get "hasMathjax" }}
+      {{ partialCached "mathjax.html" . }}
+    {{ end }}
+
+    {{ range site.Params.Advanced.customJS }}
+    <script src="{{ . | relURL }}"></script>
+    {{ end }}
+
+    {{ if site.Config.Services.GoogleAnalytics.ID }}
+    {{ template "_internal/google_analytics.html" . }}
+    {{ end }}
+
+    <script type="module" src="https://cdn.jsdelivr.net/npm/ionicons@7.4.0/dist/ionicons/ionicons.esm.js" integrity="sha256-/IFmi82bIhdYWctu0UddSlJqpnzWm7Vh2C4CM32wF/k=" crossorigin="anonymous"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/ionicons@7.4.0/dist/ionicons/ionicons.js" integrity="sha256-mr7eJMX3VC3F7G32mk4oWp1C6a2tlMYxUdptfT7uKI8=" crossorigin="anonymous"></script>
+
+    <!-- Live2D Widget: lazy-load after page is idle -->
+    <script>
+      (function() {
+        function loadLive2D() {
+          var s = document.createElement('script');
+          s.src = 'https://cdn.jsdelivr.net/npm/live2d-widget@3.1.4/lib/L2Dwidget.min.js';
+          s.onload = function() {
+            if (typeof L2Dwidget !== 'undefined') {
+              L2Dwidget.init({
+                "model": {
+                  jsonPath: "https://unpkg.com/live2d-widget-model-hijiki/assets/hijiki.model.json",
+                  "scale": 1
+                },
+                "display": {
+                  "position": "right",
+                  "width": 120,
+                  "height": 280,
+                  "hOffset": 0,
+                  "vOffset": -50
+                },
+                "mobile": {
+                  "show": true,
+                  "scale": 0.8
+                },
+                "react": {
+                  "opacityDefault": 1,
+                  "opacityOnHover": 0.1
+                }
+              });
+            }
+          };
+          document.body.appendChild(s);
+        }
+
+        if ('requestIdleCallback' in window) {
+          requestIdleCallback(loadLive2D, { timeout: 3000 });
+        } else {
+          setTimeout(loadLive2D, 2000);
+        }
+      })();
+    </script>
+  </body>
+</html>
