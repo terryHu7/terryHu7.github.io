@@ -18,4 +18,4 @@
 {{ if hugo.IsProduction }}
   {{ $mainJs = $mainJs | minify }}
 {{ end }}
-<script defer src="{{ $mainJs.RelPermalink }}"></script>
+<script src="{{ $mainJs.RelPermalink }}"></script>
