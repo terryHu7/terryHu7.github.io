@@ -45,3 +45,36 @@
 [data-theme="emerald"] #dream-single-post-main header {
   color: #1f2937;
 }
+
+nav {
+  text-shadow:
+    0 1px 3px rgba(0, 0, 0, 0.9),
+    0 0 8px rgba(0, 0, 0, 0.6),
+    0 0 20px rgba(0, 0, 0, 0.3) !important;
+}
+
+nav ion-icon {
+  filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.8));
+}
+
+#TableOfContents {
+  background: rgba(255, 255, 255, 0.85) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 0.75rem;
+  padding: 0.75rem 1rem;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
+}
+
+#TableOfContents a {
+  color: #1f2937 !important;
+}
+
+[data-theme="forest"] #TableOfContents {
+  background: rgba(30, 30, 30, 0.85) !important;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+}
+
+[data-theme="forest"] #TableOfContents a {
+  color: #e5e7eb !important;
+}
